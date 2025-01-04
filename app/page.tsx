@@ -1,6 +1,6 @@
 import HeroSlideshow from "@/components/Hero/Hero";
 import Section from "@/components/Section";
-import ImageContent from "@/components/ImageContent";
+import OurStory from "@/components/OurStory";
 import NavStrip from "@/components/Navigation/NavStrip";
 
 export default function Home() {
@@ -31,7 +31,9 @@ export default function Home() {
           </div>
         </Section> */}
         <Section title="The Schedule" id="schedule">
-          <div className="mt-8 body text-center text-xl">Tea Ceremony | 9 AM</div>
+          <div className="mt-8 body text-center text-xl">
+            Tea Ceremony | 9 AM
+          </div>
           <div className="mt-0 body text-center text-base">
             @ Rachel&apos;s House
           </div>
@@ -48,7 +50,7 @@ export default function Home() {
         </Section>
         <hr />
         <Section title="Our Story" id="our_story">
-          <ImageContent />
+          <OurStory />
         </Section>
       </div>
     </div>
