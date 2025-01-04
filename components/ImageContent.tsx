@@ -21,7 +21,7 @@ export default function ImageContent({
 
   return (
     <div className="bg-white">
-      <div className="px-6 lg:px-8">
+      <div className="">
         <div
           className={`mx-auto grid gap-8 sm:gap-24 lg:mx-0 lg:max-w-none ${
             orientation === "left" || orientation === "right"
@@ -50,7 +50,7 @@ export default function ImageContent({
             />
           </div>
           {/* Text */}
-          <div className="text-base/7 text-gray-700 flex items-center">
+          <div className="text-base/7 text-gray-700 flex items-center mx-auto">
             <div className="">{children}</div>
           </div>
         </div>

@@ -77,7 +77,7 @@ const MyImageGallery = () => {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <Gallery
         images={images.map((image) => ({
           ...image,
@@ -93,7 +93,7 @@ const MyImageGallery = () => {
 
       {/* Modal */}
       <div
-        className={`fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center ${
+        className={`max-w-screen max-h-screen overflow-hidden fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center ${
           currentImage === null ? "invisible" : "block"
         }`}
         onClick={closeModal}

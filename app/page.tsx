@@ -1,7 +1,11 @@
 import HeroSlideshow from "@/components/Hero/Hero";
+import Schedule from "@/components/Schedule/Schedule";
 import Section from "@/components/Section";
 import OurStory from "@/components/OurStory";
 import NavStrip from "@/components/Navigation/NavStrip";
+import ImageContent from "@/components/ImageContent";
+import SingleImage from "@/components/SingleImage";
+import { images } from "@/components/CloudinaryGallery/constants";
 
 export default function Home() {
   return (
@@ -31,22 +35,14 @@ export default function Home() {
           </div>
         </Section> */}
         <Section title="The Schedule" id="schedule">
-          <div className="mt-8 body text-center text-xl">
-            Tea Ceremony | 9 AM
-          </div>
-          <div className="mt-0 body text-center text-base">
-            @ Rachel&apos;s House
-          </div>
-          <br />
-          <br />
-          <div className="body text-center text-xl">The Church | 12 PM</div>
-          <div className="mt-0 body text-center text-base underline">
-            <a href="https://g.co/kgs/1CXz3Nn">La Purisima Catholic Church</a>
-          </div>
-          <br />
-          <br />
-          <div className="body text-center text-xl">The Reception | 6 PM</div>
-          <div className="body text-center text-base">RSVP for Details</div>
+          {/* <ImageContent
+            image={30}
+            orientation="left"
+            imageHeightClass="py-[12rem] lg:py-[12rem]"
+          >
+            
+          </ImageContent> */}
+          <Schedule />
         </Section>
         <hr />
         <Section title="Our Story" id="our_story">

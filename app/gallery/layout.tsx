@@ -13,7 +13,6 @@ export default function GalleryLayout({
 }>) {
   return (
     <div>
-      {" "}
       <Header />
       {children}
     </div>

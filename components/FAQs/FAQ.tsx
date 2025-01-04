@@ -4,24 +4,7 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
-
-const faqs = [
-  {
-    question: "Are you guys related?",
-    answer:
-      "Nope, you racist.",
-  },
-  {
-    question: "How long have you been together?",
-    answer:
-      "Since yo mama.",
-  },
-  {
-    question: "Did Anthony bribe you?",
-    answer:
-      "You know it.",
-  },
-];
+import faqs from "./constants";
 
 export default function FAQs() {
   return (
@@ -49,7 +32,7 @@ export default function FAQs() {
                   </DisclosureButton>
                 </dt>
                 <DisclosurePanel as="dd" className="mt-2 pr-12">
-                  <p className="text-base text-gray-600">{faq.answer}</p>
+                  <div className="text-base text-gray-600 max-w-prose">{faq.answer}</div>
                 </DisclosurePanel>
               </Disclosure>
             ))}
