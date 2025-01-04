@@ -28,17 +28,17 @@ const MyImageGallery = () => {
     document.body.style.overflow = ""; // Re-enable scrolling
   };
 
-  const handleNext = useCallback(() => {
+  const handleNext = () => {
     if (currentImage !== null) {
       setCurrentImage((prev) => (prev === images.length - 1 ? 0 : (prev ?? 0) + 1));
     }
-  },[])
+  }
 
-  const handlePrev = useCallback(() => {
+  const handlePrev = () => {
     if (currentImage !== null) {
       setCurrentImage((prev) => (prev === 0 ? images.length - 1 : (prev ?? 0) - 1));
     }
-  },[])
+  }
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: handleNext,
@@ -74,7 +74,7 @@ const MyImageGallery = () => {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [handleNext, handlePrev]);
+  }, []);
 
   return (
     <div>
@@ -130,7 +130,7 @@ const MyImageGallery = () => {
                 )}
                 {/* Cloudinary Image */}
                 <CldImage
-                  src={`https://res.cloudinary.com/dyiydoztx/image/upload/w_300,q_auto,f_auto/v${images[currentImage].version}/${images[currentImage].display_name}.jpg`}
+                  src={`https://res.cloudinary.com/dyiydoztx/image/upload/w_100,q_50,f_auto/v${images[currentImage].version}/${images[currentImage].display_name}.jpg`}
                   alt={`Image ${currentImage}`}
                   width={images[currentImage].width}
                   height={images[currentImage].height}

@@ -45,8 +45,9 @@ const CountdownTimer: React.FC = () => {
   return (
     <div className="text-center block mx-auto body">
       <p>
-        {timeLeft.months} months | {timeLeft.days} days | {timeLeft.hours} hours | {timeLeft.minutes} minutes | {timeLeft.seconds} seconds
+        {timeLeft.months} months | {timeLeft.days.toFixed(0)} days away 
       </p>
+      {/* <p>| {timeLeft.hours} hours| {timeLeft.minutes} minutes | {timeLeft.seconds} second</p> */}
     </div>
   );
 };
