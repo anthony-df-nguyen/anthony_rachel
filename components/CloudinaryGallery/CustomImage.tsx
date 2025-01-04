@@ -1,6 +1,6 @@
 "use client";
 import { CldImage } from "next-cloudinary";
-import { ThumbnailImageProps, ImageExtended, Image } from "react-grid-gallery";
+import { ThumbnailImageProps, ImageExtended, Image } from "@/components/ReactGridGallery";
 
 // By default, the CldImage component applies auto-format and auto-quality to all delivery URLs for optimized delivery.
 export type ExtendedImage = ImageExtended<Image> & {

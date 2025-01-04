@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
-import { Gallery } from "react-grid-gallery";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { Gallery } from "@/components/ReactGridGallery";
 import { useSwipeable } from "react-swipeable";
 import Image from "next/image";
 import CustomImageComponent from "./CustomImage";
@@ -22,17 +22,17 @@ const MyImageGallery = () => {
     document.body.style.overflow = ""; // Re-enable scrolling
   };
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (currentImage !== null) {
       setCurrentImage((prev) => (prev === images.length - 1 ? 0 : (prev ?? 0) + 1));
     }
-  };
+  },[])
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     if (currentImage !== null) {
       setCurrentImage((prev) => (prev === 0 ? images.length - 1 : (prev ?? 0) - 1));
     }
-  };
+  },[])
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: handleNext,
@@ -68,7 +68,7 @@ const MyImageGallery = () => {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [handleNext, handlePrev]);
 
   return (
     <div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { ThumbnailImageProps } from "react-grid-gallery";
+import { ThumbnailImageProps } from "@/components/ReactGridGallery";
 //import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 

@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,10 +22,28 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // Set the base directory to the project root
     "paths": {
-      "@/*": ["./*"]
+      "@/components/*": [
+        "components/*"
+      ], // Alias for the components folder
+      "@/lib/*": [
+        "lib/*"
+      ], // Optional: Add other aliases as needed
+      "@/utils/*": [
+        "utils/*"
+      ] // Optional: Add other aliases as needed
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.js"],
-  "exclude": ["node_modules"]
+  "include": [
+    "components/**/*",
+    "lib/**/*",
+    "next-env.d.ts",
+    "pages/**/*",
+    "src/**/*",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

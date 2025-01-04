@@ -1,5 +1,3 @@
-//import Image from "next/image";
-//import HeroSlideshow from "@/components/Hero/HeroSlidershow";
 import HeroSlideshow from "@/components/Hero/Hero";
 import Section from "@/components/Section";
 import ImageContent from "@/components/ImageContent";
