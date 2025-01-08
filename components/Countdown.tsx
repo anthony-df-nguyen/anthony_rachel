@@ -47,7 +47,7 @@ const CountdownTimer: React.FC = () => {
       <p>
         {timeLeft.months} months | {timeLeft.days.toFixed(0)} days away 
       </p>
-      {/* <p>| {timeLeft.hours} hours| {timeLeft.minutes} minutes | {timeLeft.seconds} second</p> */}
+      {/* <p> | {timeLeft.hours} hours| {timeLeft.minutes} minutes | {timeLeft.seconds} seconds</p> */}
     </div>
   );
 };
