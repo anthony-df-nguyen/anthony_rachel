@@ -50,7 +50,7 @@ const HeroImage = ({
       : images[portraitPhotoIndex]; // Fallback during initial render
 
   return (
-    <div className="bg-black relative w-screen h-screen max-h-[1200px] overflow-hidden">
+    <div className="bg-black relative w-screen h-screen max-h-[100%] overflow-hidden">
       {isLandscape !== null && (
         <CldImage
           src={`https://res.cloudinary.com/dyiydoztx/image/upload/c_fill,w_auto:breakpoints,h_auto:breakpoints,q_auto,f_auto/v${img.version}/${img.display_name}.jpg`}
@@ -65,7 +65,7 @@ const HeroImage = ({
       )}
       <div
         className={`absolute inset-0 flex flex-col items-center justify-${justify} ${
-          justify === "start" && "mt-24"
+          justify === "start" && "mt-[20vh]"
         }`}
       >
         {children}
