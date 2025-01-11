@@ -75,7 +75,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
 
         {/* Logo */}
         <Link href="/" className="flex lg:flex-1">
-          <div className="fancy text-2xl lg:text-4xl">Rachel & Anthony</div>
+          <div className="titles text-2xl lg:text-4xl">Rachel & Anthony</div>
         </Link>
 
         {/* Empty Placeholder for Alignment */}

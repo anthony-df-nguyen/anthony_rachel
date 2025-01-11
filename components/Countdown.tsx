@@ -78,17 +78,17 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ mockNow }) => {
   return (
     <div className="text-center block mx-auto body">
       {timeLeft.months !== undefined ? (
-        <p>
+        <div>
           {timeLeft.months} months | {timeLeft.days} days
-        </p>
+        </div>
       ) : timeLeft.days !== undefined ? (
-        <p>
+        <div>
           {timeLeft.days} days | {timeLeft.hours} hours
-        </p>
+        </div>
       ) : (
-        <p>
+        <div>
           {timeLeft.hours} hours | {timeLeft.minutes} minutes | {timeLeft.seconds} seconds
-        </p>
+        </div>
       )}
     </div>
   );

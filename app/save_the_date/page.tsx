@@ -1,19 +1,27 @@
 import HeroImage from "@/components/Hero/Hero";
+import HeroSlideshow from "@/components/Hero/HeroSlidershow";
 import Section from "@/components/Section";
 import Header from "@/components/Navigation/Header";
 
 export default function SaveTheDate() {
   return (
     <div>
-      <HeroImage portraitPhotoIndex={32} landscapePhotoIndex={9} breakpoint={1200} opacity={0.4} justify="start">
-        <div className="fancy text-white text-center text-4xl xl:text-[3rem] drop-shadow-lg">
+      {/* <HeroSlideshow /> */}
+      <HeroImage
+        portraitPhotoIndex={32}
+        landscapePhotoIndex={4}
+        justify="start"
+        opacity={0.5}
+        breakpoint={768}
+      >
+        <div className="titles text-center text-white font-extralight text-[1.75rem] xl:text-[2.5rem] 2xl:text-[3rem]  drop-shadow-lg">
+          <div className="">09 . 20 . 2025</div>
+        </div>
+        <div className="mt-2 titles uppercase text-white font-medium text-center text-[2rem] xl:text-[2.75rem] 2xl:text-[4rem] drop-shadow-lg">
           Rachel & Anthony
         </div>
-        <div className="mt-4 xl:mt-8 fancy text-white text-center text-6xl xl:text-[6rem] drop-shadow-lg">
+        <div className="relative mt-2 titles text-center text-white text-[1.5rem] xl:text-[1.75rem] 2xl:text-[2.25rem] drop-shadow-lg">
           Save the Date
-        </div>
-        <div className="mt-4 xl:mt-8 body text-center text-white font-weight-bold text-2xl xl:text-[2rem] drop-shadow-lg ">
-          September 20 2025
         </div>
       </HeroImage>
       <div className="">

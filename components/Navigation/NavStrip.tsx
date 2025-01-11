@@ -7,7 +7,7 @@ const NavStrip = () => {
     <div className="">
       <div className="flex items-center justify-center gap-16">
         {navigation.map((row) => (
-          <Link key={row.name} href={row.href} className="body text-sm">
+          <Link key={row.name} href={row.href} className="body text-md">
             {row.name}
           </Link>
         ))}

@@ -1,23 +1,26 @@
 "use client";
 import React from "react";
 import { Fade } from "react-slideshow-image";
-import { CldImage } from "next-cloudinary";
-import { images } from "../Archive/CloudinaryGallery/constants";
+import Image from "next/image";
+import { images } from "../ImageGallery/constants";
 import "react-slideshow-image/dist/styles.css";
 
 const HeroSlideshow = () => {
   return (
     <div className="slide-container">
-      <Fade arrows={false} autoplay infinite canSwipe indicators>
+      <Fade arrows={false} autoplay infinite canSwipe indicators duration={2000}>
         {images.map((img, i) => (
-          <div key={i} className="each-slide lg:rounded-lg overflow-hidden">
-            <CldImage
-              src={`https://res.cloudinary.com/dyiydoztx/image/upload/w_300,q_auto,f_auto/v${img.version}/${img.display_name}.jpg`}
+          <div
+            key={i}
+            className="each-slide w-screen h-screen flex items-center justify-center relative"
+          >
+            <Image
+              src={img.src}
               alt={`Image ${img}`}
-              width={img.width}
-              height={img.height}
-              className={`max-w-full max-h-full object-contain transition-opacity duration-300"
-              }`}
+              fill
+              className="object-cover opacity-70" // Ensures image covers the entire container while maintaining aspect ratio
+              quality={50}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
             />
           </div>
         ))}
@@ -25,4 +28,5 @@ const HeroSlideshow = () => {
     </div>
   );
 };
+
 export default HeroSlideshow;

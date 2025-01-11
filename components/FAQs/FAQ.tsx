@@ -16,7 +16,7 @@ export default function FAQs() {
               <Disclosure key={faq.question} as="div" className="pt-6">
                 <dt>
                   <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900">
-                    <span className="text-base/7 font-semibold">
+                    <span className="text-base/7 font-medium">
                       {faq.question}
                     </span>
                     <span className="ml-6 flex h-7 items-center">

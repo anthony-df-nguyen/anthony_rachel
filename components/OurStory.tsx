@@ -9,7 +9,7 @@ const OurStory = () => {
         orientation="left"
         imageHeightClass="py-[16rem]  md:py-96 lg:py-[30rem]"
       >
-        <div className="body text-3xl text-left font-normal pb-6 border-b-[1px]">
+        <div className="titles text-3xl text-left pb-6 border-b-[1px]">
           He Said
         </div>
         <div className="mt-6">
@@ -66,7 +66,7 @@ const OurStory = () => {
         orientation="right"
         imageHeightClass="py-[16rem]  md:py-96 lg:py-[30rem]"
       >
-        <div className="body text-3xl text-left font-normal pb-6 border-b-[1px]">
+        <div className="titles text-3xl text-left pb-6 border-b-[1px]">
           She Said
         </div>
         <div className="mt-6">

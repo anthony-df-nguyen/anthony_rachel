@@ -87,7 +87,7 @@ const HeroImage = ({
       <div
         className={`absolute inset-0 flex flex-col items-center ${
           (justify === "start" && !isLandscape) && "mt-[15vh] justify-start"
-        } ${isLandscape && "justify-center"}`}
+        } ${isLandscape && "justify-center"} ${justify === "center" && "justify-center"}`}
       >
         {children}
       </div>
