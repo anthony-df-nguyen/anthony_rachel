@@ -14,7 +14,7 @@ export default function FAQLayout({
   return (
     <div>
       {" "}
-      <Header />
+      <Header transparent={false} />
       {children}
     </div>
   );

@@ -1,5 +1,5 @@
-import Section from "@/components/Section";
-import ImageGallery from "../../components/CloudinaryGallery/MyGallery";
+import Section from "../../components/Section";
+import ImageGallery from "../../components/ImageGallery/ImageGallery";
 
 export default function Gallery() {
   return (

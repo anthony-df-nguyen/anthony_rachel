@@ -2,10 +2,10 @@ import HeroImage from "@/components/Hero/Hero";
 import Section from "@/components/Section";
 import Header from "@/components/Navigation/Header";
 
-export default function FAQ() {
+export default function SaveTheDate() {
   return (
     <div>
-      <HeroImage portraitPhotoIndex={31} landscapePhotoIndex={9} breakpoint={1200} opacity={0.4} justify="start">
+      <HeroImage portraitPhotoIndex={32} landscapePhotoIndex={9} breakpoint={1200} opacity={0.4} justify="start">
         <div className="fancy text-white text-center text-4xl xl:text-[3rem] drop-shadow-lg">
           Rachel & Anthony
         </div>

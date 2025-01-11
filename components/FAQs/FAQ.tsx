@@ -32,7 +32,7 @@ export default function FAQs() {
                   </DisclosureButton>
                 </dt>
                 <DisclosurePanel as="dd" className="mt-2 pr-12">
-                  <div className="text-base text-gray-600 max-w-prose">{faq.answer}</div>
+                  <div className="text-base text-gray-600">{faq.answer}</div>
                 </DisclosurePanel>
               </Disclosure>
             ))}

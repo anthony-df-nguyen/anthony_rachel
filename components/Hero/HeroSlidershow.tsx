@@ -2,7 +2,7 @@
 import React from "react";
 import { Fade } from "react-slideshow-image";
 import { CldImage } from "next-cloudinary";
-import { images } from "../CloudinaryGallery/constants";
+import { images } from "../Archive/CloudinaryGallery/constants";
 import "react-slideshow-image/dist/styles.css";
 
 const HeroSlideshow = () => {

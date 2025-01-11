@@ -14,7 +14,7 @@ export default function GalleryLayout({
 }>) {
   return (
     <div>
-      <Header />
+      <Header transparent={false} />
       {children}
     </div>
   );

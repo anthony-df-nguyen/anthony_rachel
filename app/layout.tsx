@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Header from "../components/Navigation/Header2";
-import { Pinyon_Script, Playfair_Display } from "next/font/google";
+import Header from "../components/Archive/Header2";
+import { Pinyon_Script, Playfair_Display, Montserrat, Raleway } from "next/font/google";
 import "./globals.scss";
 
 const Fancy = Pinyon_Script({
@@ -9,8 +9,8 @@ const Fancy = Pinyon_Script({
   preload: false,
 });
 
-const Body = Playfair_Display({
-  weight: ["400", "500", "600", "700"],
+const Body = Montserrat({
+  weight: ["100","200","300","400", "500", "600", "700", "800"],
   variable: "--body",
   preload: false,
 });
@@ -27,6 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="robots" content="noindex,nofollow" />
       <body className={`${Fancy.variable} ${Body.variable} antialiased`}>
         <div className="pt-100 relative">{children}</div>
       </body>

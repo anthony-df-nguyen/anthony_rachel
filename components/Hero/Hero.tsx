@@ -1,9 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { CldImage } from "next-cloudinary";
-import { images } from "../CloudinaryGallery/constants";
+import React, { useEffect, useState, JSX } from "react";
+import Image from "next/image";
+import { images } from "../ImageGallery/constants";
 import "react-slideshow-image/dist/styles.css";
 
+/**
+ * Props for the HeroImage component.
+ * @property {number} landscapePhotoIndex - The index of the image to display in landscape mode.
+ * @property {number} portraitPhotoIndex - The index of the image to display in portrait mode.
+ * @property {number} breakpoint - The screen width (in pixels) to determine when to switch between landscape and portrait modes.
+ * @property {React.ReactElement | React.ReactElement[]} [children] - Optional children elements to display on top of the image.
+ * @property {number} opacity - The opacity of the background image (0 to 1).
+ * @property {string} [justify="center"] - The alignment of the content inside the container. Accepts "start" or "center".
+ */
 type Props = {
   landscapePhotoIndex: number;
   portraitPhotoIndex: number;
@@ -13,6 +22,16 @@ type Props = {
   justify?: string;
 };
 
+/**
+ * HeroImage component displays a full-screen responsive image that switches
+ * between landscape and portrait images based on the screen width.
+ * 
+ * The component also accepts children elements to overlay on the image and
+ * supports customizing opacity and alignment of the content.
+ * 
+ * @param {Props} props - The props for the HeroImage component.
+ * @returns {JSX.Element} The rendered HeroImage component.
+ */
 const HeroImage = ({
   landscapePhotoIndex = 0,
   portraitPhotoIndex = 0,
@@ -20,30 +39,31 @@ const HeroImage = ({
   children = <></>,
   opacity = 0.5,
   justify = "center",
-}: Props) => {
+}: Props): JSX.Element => {
   const [isLandscape, setIsLandscape] = useState<boolean | null>(null); // Initial state is null
   const [currentWidth, setCurrentWidth] = useState<number>(0);
 
-  // Update the image mode (landscape/portrait) on screen resize
+  /**
+   * Effect to handle screen resizing and update image orientation.
+   */
   useEffect(() => {
     const handleResize = () => {
       setCurrentWidth(window.innerWidth);
       setIsLandscape(window.innerWidth > breakpoint);
     };
 
-    // Only runs on the client-side
+    // Set initial width and orientation
     setCurrentWidth(window.innerWidth);
     setIsLandscape(window.innerWidth > breakpoint);
 
     window.addEventListener("resize", handleResize);
 
-    // Clean up the event listener
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [breakpoint]);
 
-  // Select the appropriate image based on screen width
+  // Select the appropriate image based on orientation
   const img =
     isLandscape !== null
       ? images[isLandscape ? landscapePhotoIndex : portraitPhotoIndex]
@@ -52,8 +72,8 @@ const HeroImage = ({
   return (
     <div className="bg-black relative w-screen h-screen max-h-[100%] overflow-hidden">
       {isLandscape !== null && (
-        <CldImage
-          src={`https://res.cloudinary.com/dyiydoztx/image/upload/c_fill,w_auto:breakpoints,h_auto:breakpoints,q_auto,f_auto/v${img.version}/${img.display_name}.jpg`}
+        <Image
+          src={img.src}
           alt={`Image ${img}`}
           width={img.width}
           height={img.height}
@@ -61,12 +81,13 @@ const HeroImage = ({
           style={{
             opacity: opacity,
           }}
+          priority
         />
       )}
       <div
-        className={`absolute inset-0 flex flex-col items-center justify-${justify} ${
-          justify === "start" && "mt-[20vh]"
-        }`}
+        className={`absolute inset-0 flex flex-col items-center ${
+          (justify === "start" && !isLandscape) && "mt-[15vh] justify-start"
+        } ${isLandscape && "justify-center"}`}
       >
         {children}
       </div>

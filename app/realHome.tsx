@@ -5,49 +5,39 @@ import Section from "@/components/Section";
 import OurStory from "@/components/OurStory";
 import NavStrip from "@/components/Navigation/NavStrip";
 import CountdownTimer from "@/components/Countdown";
-import Header from "@/components/Navigation/Header2"
+import Header from "@/components/Navigation/Header";
 import ImageContent from "@/components/ImageContent";
 import SingleImage from "@/components/SingleImage";
-import { images } from "@/components/CloudinaryGallery/constants";
+import { images } from "@/components/Archive/CloudinaryGallery/constants";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <HeroImage portraitPhotoIndex={2} landscapePhotoIndex={2} justify="center" opacity={.5}>
-        <div className="fancy text-white text-center text-6xl drop-shadow-lg">
-          Rachel & Anthony
-        </div>
-        <div className="mt-4 body text-center text-white text-xl drop-shadow-lg">
-          September 20 2025
-        </div>
-        <div className="mt-4 body text-center text-white text-md drop-shadow-lg">
-          <CountdownTimer />
-        </div>
-      </HeroImage>
-      <div className="container mx-auto">
-        <div className="hidden lg:block my-8">
+    <div className="">
+      <Header transparent />
+      <div className="absolute top-0 left-0 w-full h-screen">
+        <HeroImage
+          portraitPhotoIndex={32}
+          landscapePhotoIndex={19}
+          justify="start"
+          opacity={0.5}
+          breakpoint={1300}
+        >
+          <div className="fancy text-white text-center text-6xl xl:text-7xl drop-shadow-lg">
+            We're Getting Married!
+          </div>
+          <div className="mt-4 body text-center text-white font-semibold text-xl xl:text-4xl  drop-shadow-lg">
+            September 20 2025
+          </div>
+          <div className="mt-4 xl:mt-7 body text-center text-white text-md font-light xl:text-2xl drop-shadow-lg">
+            <CountdownTimer />
+          </div>
+        </HeroImage>
+      </div>
+      <div className="h-screen" />
+      <div className="container mx-auto mt-[-4rem] lg:mt-[-6rem]">
+        {/* <div className="hidden lg:block my-8">
           <NavStrip />
-        </div>
-        <hr />
-        {/* <Section title="Rachel & Anthony Nguyen" id="our_wedding">
-          <div className="mt-8 body text-center text-2xl">
-            September 20, 2025
-          </div>
-          <div className="body text-md text-center">
-            Orange County, California
-          </div>
-
-          <div className="mt-8 text-center">
-            <a
-              href="https://www.zola.com/wedding/anthonyandrachelseptember20/rsvp"
-              type="button"
-              className="button"
-            >
-              RSVP
-            </a>
-          </div>
-        </Section> */}
+        </div> */}
         <Section title="The Schedule" id="schedule">
           {/* <ImageContent
             image={30}
