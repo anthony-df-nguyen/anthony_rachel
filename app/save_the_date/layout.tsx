@@ -4,6 +4,13 @@ import React from "react";
 export const metadata: Metadata = {
   title: "Save the Date",
   description: "Save the date for Anthony and Rachel's wedding and help us out with your latest contact into.",
+  openGraph: {
+    title: "Rachel & Anthony Nguyen",
+    description: "Save the Date September 20th 2025",
+    type: "website",
+    url: "https://www.rachelanthonynguyen.com/",
+    images: "/images/DSC_5389.jpg"
+  }
 };
 
 export default function SaveTheDate({
