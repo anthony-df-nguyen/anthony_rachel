@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, JSX } from "react";
 import Image from "next/image";
-import { images } from "../ImageGallery/constants";
+import { images } from "@/components/ImageGallery";
 import "react-slideshow-image/dist/styles.css";
 
 /**

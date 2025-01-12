@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import React from "react";
-import Header from "../../components/Navigation/Header";
+import {Header} from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "Gallery",

@@ -4,8 +4,7 @@ import { useState, useEffect, JSX } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { navigation } from "./constants";
-import NavStrip from "./NavStrip";
+import { NavStrip, navLinks } from "@/components/Navigation";
 
 type Props = {
   /**
@@ -17,7 +16,7 @@ type Props = {
 
 /**
  * Example component renders a responsive navigation header with a mobile menu.
- * 
+ *
  * Features:
  * - Dynamic background color based on scroll position.
  * - Mobile-friendly navigation menu with smooth opening and closing animations.
@@ -65,7 +64,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
             type="button"
             onClick={() => setMobileMenuOpen(true)}
             className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 ${
-              (!isScrolled && transparent) ? "text-white" : "text-gray-700"
+              !isScrolled && transparent ? "text-white" : "text-gray-700"
             }`}
             aria-label="Open main menu"
           >
@@ -110,7 +109,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
+                {navLinks.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}

@@ -1,4 +1,4 @@
-const navigation: {
+const navLinks: {
   name: string;
   href: string;
   external?: boolean;
@@ -15,4 +15,4 @@ const navigation: {
   },
 ];
 
-export { navigation };
+export { navLinks };

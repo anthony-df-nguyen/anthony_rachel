@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { CldImage } from "next-cloudinary";
-import { CloudinaryImage } from "./Archive/CloudinaryGallery/constants";
+import { CloudinaryImage } from "./CloudinaryGallery/constants";
 
 type Props = {
   img: CloudinaryImage;

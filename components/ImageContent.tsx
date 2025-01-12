@@ -1,7 +1,7 @@
 "use client";
 import React, { JSX } from "react";
 import Image from "next/image";
-import { images } from "./ImageGallery/constants";
+import { images } from "@/components/ImageGallery";
 
 type Props = {
   /**

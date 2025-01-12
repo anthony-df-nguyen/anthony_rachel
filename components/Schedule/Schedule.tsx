@@ -1,5 +1,4 @@
 import events from "./constants";
-import { MdOpenInNew } from "react-icons/md";
 
 type Props = {
   showIcon?: boolean;

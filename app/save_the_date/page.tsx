@@ -1,7 +1,5 @@
 import HeroImage from "@/components/Hero/Hero";
-import HeroSlideshow from "@/components/Hero/HeroSlidershow";
 import Section from "@/components/Section";
-import Header from "@/components/Navigation/Header";
 
 export default function SaveTheDate() {
   return (

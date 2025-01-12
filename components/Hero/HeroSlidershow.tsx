@@ -2,7 +2,7 @@
 import React from "react";
 import { Fade } from "react-slideshow-image";
 import Image from "next/image";
-import { images } from "../ImageGallery/constants";
+import { images } from "@/components/ImageGallery";
 import "react-slideshow-image/dist/styles.css";
 
 const HeroSlideshow = () => {

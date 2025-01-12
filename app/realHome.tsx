@@ -1,14 +1,10 @@
 // @ts-nocheck
+import {Header, Footer, NavStrip} from "@/components/Navigation";
 import HeroImage from "@/components/Hero/Hero";
 import Schedule from "@/components/Schedule/Schedule";
 import Section from "@/components/Section";
 import OurStory from "@/components/OurStory";
-import NavStrip from "@/components/Navigation/NavStrip";
 import CountdownTimer from "@/components/Countdown";
-import Header from "@/components/Navigation/Header";
-import ImageContent from "@/components/ImageContent";
-import SingleImage from "@/components/SingleImage";
-import { images } from "@/components/Archive/CloudinaryGallery/constants";
 
 export default function Home() {
   return (
@@ -41,17 +37,7 @@ export default function Home() {
       </div>
       <div className="h-screen" />
       <div className="container mx-auto mt-[-4rem] lg:mt-[-6rem]">
-        {/* <div className="hidden lg:block my-8">
-          <NavStrip />
-        </div> */}
         <Section title="The Schedule" id="schedule">
-          {/* <ImageContent
-            image={30}
-            orientation="left"
-            imageHeightClass="py-[12rem] lg:py-[12rem]"
-          >
-                    
-          </ImageContent> */}
           <Schedule />
         </Section>
         <hr />
@@ -59,6 +45,7 @@ export default function Home() {
           <OurStory />
         </Section>
       </div>
+      <Footer />
     </div>
   );
 }

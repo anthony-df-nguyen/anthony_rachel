@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Header from "../../components/Navigation/Header"
+import { Header } from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -13,7 +13,6 @@ export default function FAQLayout({
 }>) {
   return (
     <div>
-      {" "}
       <Header transparent={false} />
       {children}
     </div>

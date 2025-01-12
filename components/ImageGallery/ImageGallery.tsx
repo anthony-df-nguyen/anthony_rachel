@@ -3,8 +3,7 @@ import React, { useState, useEffect, useRef, useCallback, JSX } from "react";
 import { Gallery } from "@/components/ReactGridGallery";
 import { useSwipeable } from "react-swipeable";
 import Image from "next/image";
-import CustomImageComponent from "./CustomImage";
-import { images } from "./constants";
+import {CustomImage, images} from "@/components/ImageGallery";
 
 /**
  * MyImageGallery component renders an interactive image gallery with swipe, keyboard,
@@ -109,7 +108,7 @@ const MyImageGallery = (): JSX.Element => {
       <Gallery
         images={galleryImages}
         enableImageSelection={false}
-        thumbnailImageComponent={(items) => CustomImageComponent(items)}
+        thumbnailImageComponent={(items) => CustomImage(items)}
         onClick={(index) => handleClick(index)}
       />
 

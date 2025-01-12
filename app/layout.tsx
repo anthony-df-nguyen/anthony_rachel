@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Header from "../components/Archive/Header2";
+import Footer from "@/components/Navigation/Footer";
 import {
   Pinyon_Script,
   Trirong,
@@ -49,8 +49,9 @@ export default function RootLayout({
       <body
         className={`${Fancy.variable} ${Body.variable} ${Titles.variable} antialiased`}
       >
-        <div className="pt-100 relative">{children}</div>
+        <div className="pt-100 relative">{children}</div> 
       </body>
+
     </html>
   );
 }
