@@ -23,12 +23,12 @@ export default function SaveTheDate() {
         <div className="relative mt-2 titles text-center text-white text-[1.5rem] xl:text-[1.75rem] 2xl:text-[2.25rem] drop-shadow-lg">
           Save the Date
         </div>
-        {/* <a className="button mt-4" href="https://www.zola.com/wedding/anthonyandrachelseptember20/rsvp">
-            <button>Send Us Info</button>
-          </a> */}
+        <a className="button mt-6" href="https://www.zola.com/addr/G67jbBkDB">
+          <button>Fill Out Form</button>
+        </a>
       </HeroImage>
       <div className="">
-        <Section title="Requesting Your Information" id="collect">
+        <Section title="Requesting your information" id="collect">
           <div className="text-center">
             <div className="max-w-xl mx-auto">
               Please provide your updated contact information so we can send
@@ -44,9 +44,9 @@ export default function SaveTheDate() {
             <div className="mt-12 container mx-auto">
               <a
                 href="https://www.zola.com/addr/G67jbBkDB"
-                className="body button"
+                className="body button filled"
               >
-                Send Info
+                Fill Out Form
               </a>
             </div>
           </div>

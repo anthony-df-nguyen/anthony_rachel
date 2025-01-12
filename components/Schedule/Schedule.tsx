@@ -1,4 +1,6 @@
 import events from "./constants";
+import { MdOpenInNew } from "react-icons/md";
+
 type Props = {
   showIcon?: boolean;
   showDescription?: boolean;
@@ -18,10 +20,10 @@ const Schedule = ({ showIcon, showDescription }: Props) => {
             {event.title}
           </div>
 
-          <div className="mt-0 titles text-center text-lg lg:text-xl">
+          <div className="mt-0 titles mx-auto text-center text-lg lg:text-xl">
             {event.link ? (
-              <a href={event.link} className="">
-                {event.location}
+              <a href={event.link} className="text-center flex items-center gap-1 hover:text-[var(--green)]">
+                {event.location} 
               </a>
             ) : (
               event.location

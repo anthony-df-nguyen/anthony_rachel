@@ -42,5 +42,8 @@ body {
 }
 
 .button {
-  @apply rounded-md bg-[var(--darkgreen)] px-4 py-2 text-xl titles tracking-widest font-semibold text-white shadow-sm hover:bg-[var(--green)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600
+  @apply rounded-md border-[1px] px-4 py-2 text-xl titles tracking-tight font-semibold text-white shadow-sm hover:bg-[var(--green)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600;
+  &.filled {
+    @apply bg-[var(--darkgreen)] border-0;
+  }
 }
