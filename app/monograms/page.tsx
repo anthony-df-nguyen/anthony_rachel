@@ -1,9 +1,7 @@
 import React from "react";
 import Section from "@/components/Section";
 
-type Props = {};
-
-const page = (props: Props) => {
+const Page = () => {
   return (
     <Section id="monogram" title="Monograms">
       <div className="p-8 flex-wrap flex justify-center items-center gap-16 ">
@@ -39,4 +37,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Page;
