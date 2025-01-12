@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/Navigation";
+import { Header, Footer } from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -15,6 +15,7 @@ export default function FAQLayout({
     <div>
       <Header transparent={false} />
       {children}
+      <Footer />
     </div>
   );
 }
