@@ -5,6 +5,7 @@ export default function FAQ() {
   return (
     <div className="container mx-auto">
       <Section title="FAQs" id="faq">
+       
         <FAQs />
       </Section>
     </div>
