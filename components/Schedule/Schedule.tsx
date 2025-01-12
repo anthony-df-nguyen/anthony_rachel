@@ -10,15 +10,15 @@ const Schedule = ({ showIcon, showDescription }: Props) => {
       {events.map((event, index) => (
         <div key={index} className="flex flex-col gap-2">
           {showIcon && event.icon}
-          <div className="titles text-center text-2xl">
+          <div className="titles text-center text-2xl lg:text-3xl">
             {event.time}
           </div>
           {/* <div className="w-3 h-1 border-b-[1px] border-gray-300 mx-auto block text-center"></div> */}
-          <div className="fancy text-center text-3xl ">
+          <div className="fancy text-center text-3xl lg:text-4xl">
             {event.title}
           </div>
 
-          <div className="mt-0 titles text-center text-lg">
+          <div className="mt-0 titles text-center text-lg lg:text-xl">
             {event.link ? (
               <a href={event.link} className="">
                 {event.location}

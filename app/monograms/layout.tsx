@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Save the Date | Rachel & Anthony Nguyen",
-  description: "Save the date for Anthony and Rachel's wedding and help us out with your latest contact into.",
+  title: "Monograms | Rachel & Anthony",
+  description: "",
   openGraph: {
-    title: "Save the Date | Rachel & Anthony Nguyen",
+    title: "Monograms | Rachel & Anthon",
     description: "Save the Date September 20th 2025",
     type: "website",
     url: "https://www.rachelanthonynguyen.com/",

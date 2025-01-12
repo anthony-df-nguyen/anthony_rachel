@@ -31,9 +31,9 @@ export default function SaveTheDate() {
         <Section title="Requesting Your Information" id="collect">
           <div className="text-center">
             <div className="max-w-xl mx-auto">
-              Please help us provide your updated contact information so that we
-              know where to send your invites. If you run into any issues
-              finding your name or anything else, please feel free to call or{" "}
+              Please provide your updated contact information so we can send
+              your invites. If you have trouble finding your name or encounter
+              any issues, feel free to call us or &nbsp;
               <a
                 href="mailto:anthonyrachelnguyen@gmail.com"
                 className="underline"
@@ -46,7 +46,7 @@ export default function SaveTheDate() {
                 href="https://www.zola.com/addr/G67jbBkDB"
                 className="body button"
               >
-                Fill Out Form
+                Send Info
               </a>
             </div>
           </div>
