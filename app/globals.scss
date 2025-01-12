@@ -5,7 +5,12 @@
 :root {
   --background: #fff;
   --foreground: #0d0d0d;
-  --accent: #387c38;
+  --darkgreen: #3d5919;
+  --green: #738561;
+  --brightgreen:#999f53;
+  --brightberry:#912f57;
+  --mediumberry:#712c48;
+  --darkberry:#410016;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,19 +37,10 @@ body {
   font-family: var(--titles);
 }
 
-
-.fancyTitle {
-  @apply text-center titles text-4xl lg:text-6xl
-}
-
 .absoluteCenter {
   @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
 }
 
-.accent {
-  color: var(--accent)
-}
-
 .button {
-  @apply rounded-md bg-[var(--accent)] px-4 py-2 text-xl titles tracking-widest font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 opacity-90
+  @apply rounded-md bg-[var(--darkgreen)] px-4 py-2 text-xl titles tracking-widest font-semibold text-white shadow-sm hover:bg-[var(--green)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600
 }

@@ -8,21 +8,24 @@ export default function SaveTheDate() {
     <div>
       {/* <HeroSlideshow /> */}
       <HeroImage
-        portraitPhotoIndex={32}
+        portraitPhotoIndex={13}
         landscapePhotoIndex={4}
         justify="start"
         opacity={0.5}
         breakpoint={768}
       >
         <div className="titles text-center text-white font-extralight text-[1.75rem] xl:text-[2.5rem] 2xl:text-[3rem]  drop-shadow-lg">
-          <div className="">09 . 20 . 2025</div>
+          <div className="">09.20.2025</div>
         </div>
-        <div className="mt-2 titles uppercase text-white font-medium text-center text-[2rem] xl:text-[2.75rem] 2xl:text-[4rem] drop-shadow-lg">
+        <div className="mt-2 fancy text-white font-medium text-center tracking-tighter text-[2.75rem] xl:text-[2.75rem] 2xl:text-[4rem] drop-shadow-lg">
           Rachel & Anthony
         </div>
         <div className="relative mt-2 titles text-center text-white text-[1.5rem] xl:text-[1.75rem] 2xl:text-[2.25rem] drop-shadow-lg">
           Save the Date
         </div>
+        {/* <a className="button mt-4" href="https://www.zola.com/wedding/anthonyandrachelseptember20/rsvp">
+            <button>Send Us Info</button>
+          </a> */}
       </HeroImage>
       <div className="">
         <Section title="Requesting Your Information" id="collect">

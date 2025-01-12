@@ -49,7 +49,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
 
   const headerClass = `z-10 w-full sticky top-0 transition-colors duration-700 ${
     isScrolled || !transparent
-      ? "bg-white shadow text-black"
+      ? "shadow bg-white/90 text-black backdrop-blur-md backdrop-opacity-80"
       : "bg-transparent text-white"
   }`;
 
@@ -75,7 +75,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
 
         {/* Logo */}
         <Link href="/" className="flex lg:flex-1">
-          <div className="titles text-2xl lg:text-4xl">Rachel & Anthony</div>
+          <div className="fancy text-2xl lg:text-4xl">Rachel & Anthony</div>
         </Link>
 
         {/* Empty Placeholder for Alignment */}
