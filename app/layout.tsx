@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="en">
       <meta name="robots" content="noindex,nofollow" />
       <body
-        className={`${Fancy.variable} ${Body.variable} ${Titles.variable} antialiased`}
+        className={`${Fancy.variable} ${Body.variable} ${Titles.variable} antialiased `}
       >
         <div className="pt-100 relative">{children}</div> 
       </body>

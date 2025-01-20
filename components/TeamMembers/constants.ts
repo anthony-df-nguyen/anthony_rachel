@@ -36,6 +36,11 @@ export const team: TeamMember[] = [
     role: "Hooker",
     imageUrl:
       "/images/andrei.jpg",
-  }
-  // Add more team members as needed...
+  },
+  {
+    name: "Mark",
+    role: "Big Daddy",
+    imageUrl:
+      "/images/mark.jpg",
+  },
 ];

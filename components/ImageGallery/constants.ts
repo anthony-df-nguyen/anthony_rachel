@@ -194,6 +194,12 @@ const images = [
     "height": 500,
     "hidden": true,
   },
+  {
+    "src": "/images/mark.jpg",
+    "width": 500,
+    "height": 500,
+    "hidden": true,
+  },
  ];
 
 export { images };

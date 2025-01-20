@@ -12,9 +12,9 @@ export default function FAQLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <div className="">
       <Header transparent={false} />
-      {children}
+      <div className="bg-white">{children}</div>
       <Footer />
     </div>
   );

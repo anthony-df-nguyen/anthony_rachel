@@ -4,7 +4,7 @@ import { navLinks } from "@/components/Navigation";
 
 export default function Navigation() {
   return (
-    <nav className="bg-[var(--green)] text-white py-4">
+    <div className=" text-gray-600 py-16 ">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="fancy text-center  mb-4 text-3xl">Rachel & Anthony</div>
         <ul className="flex flex-col text-center justify-center gap-4">
@@ -22,6 +22,6 @@ export default function Navigation() {
           ))}
         </ul>
       </div>
-    </nav>
+    </div>
   );
 }

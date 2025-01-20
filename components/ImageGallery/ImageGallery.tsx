@@ -3,65 +3,69 @@ import React, { useState, useEffect, useRef, useCallback, JSX } from "react";
 import { Gallery } from "@/components/ReactGridGallery";
 import { useSwipeable } from "react-swipeable";
 import Image from "next/image";
-import {CustomImage, images} from "@/components/ImageGallery";
+import { CustomImage, images } from "@/components/ImageGallery";
 
 /**
- * MyImageGallery component renders an interactive image gallery with swipe, keyboard,
- * and button navigation. It also includes a modal view for displaying images in full-screen mode.
+ * MyImageGallery component renders an interactive image gallery with responsive rowHeight.
  *
  * Features:
- * - Clicking on a thumbnail opens the image in a modal.
- * - Modal navigation via arrows, swipe gestures, and keyboard shortcuts.
- * - Disables page scrolling while the modal is open.
+ * - Dynamic rowHeight based on screen width.
+ * - Swipe, keyboard, and button navigation.
+ * - Modal view for displaying images in full-screen mode.
  *
  * @returns {JSX.Element} The rendered MyImageGallery component.
  */
 const MyImageGallery = (): JSX.Element => {
-  const galleryImages = images.filter(row => !row.hidden)
+  const galleryImages = images.filter((row) => !row.hidden);
   const [currentImage, setCurrentImage] = useState<number | null>(null); // Stores the index of the currently active image
+  const [rowHeight, setRowHeight] = useState<number>(120); // Stores the dynamic row height
   const isModalOpenRef = useRef(false); // Tracks whether the modal is open
 
-  /**
-   * Handles clicking on a gallery thumbnail to open the modal.
-   * @param {number} index - The index of the clicked image.
-   */
+  // Update rowHeight based on screen width
+  useEffect(() => {
+    const updateRowHeight = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 768) {
+        setRowHeight(120); // For small screens
+      } else if (screenWidth < 1200) {
+        setRowHeight(200); // For medium screens
+      } else {
+        setRowHeight(300); // For large screens
+      }
+    };
+
+    updateRowHeight(); // Initialize on mount
+    window.addEventListener("resize", updateRowHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateRowHeight);
+    };
+  }, []);
+
   const handleClick = (index: number) => {
-    console.log("Handle Click detected");
     setCurrentImage(index);
     isModalOpenRef.current = true;
     document.body.style.overflow = "hidden"; // Disable page scrolling
   };
 
-  /**
-   * Closes the modal and resets the modal state.
-   */
   const closeModal = () => {
     setCurrentImage(null);
     isModalOpenRef.current = false;
     document.body.style.overflow = ""; // Re-enable page scrolling
   };
 
-  /**
-   * Navigates to the next image in the gallery.
-   */
   const handleNext = useCallback(() => {
     setCurrentImage((prev) =>
       prev !== null && prev === images.length - 1 ? 0 : (prev ?? 0) + 1
     );
   }, [images.length]);
 
-  /**
-   * Navigates to the previous image in the gallery.
-   */
   const handlePrev = useCallback(() => {
     setCurrentImage((prev) =>
       prev !== null && prev === 0 ? images.length - 1 : (prev ?? 0) - 1
     );
   }, [images.length]);
 
-  /**
-   * Configures swipe gestures for navigation using react-swipeable.
-   */
   const swipeHandlers = useSwipeable({
     onSwipedLeft: handleNext,
     onSwipedRight: handlePrev,
@@ -69,17 +73,10 @@ const MyImageGallery = (): JSX.Element => {
     trackMouse: true,
   });
 
-  /**
-   * Adds keyboard navigation for modal interaction.
-   * - ArrowRight: Go to the next image.
-   * - ArrowLeft: Go to the previous image.
-   * - Escape: Close the modal.
-   */
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isModalOpenRef.current) return;
 
-      // Prevent default browser behavior for certain keys
       if (["ArrowRight", "ArrowLeft", "Escape"].includes(e.key)) {
         e.preventDefault();
       }
@@ -110,6 +107,7 @@ const MyImageGallery = (): JSX.Element => {
         enableImageSelection={false}
         thumbnailImageComponent={(items) => CustomImage(items)}
         onClick={(index) => handleClick(index)}
+        rowHeight={rowHeight} // Use the dynamic rowHeight
       />
 
       {/* Modal */}
@@ -125,7 +123,7 @@ const MyImageGallery = (): JSX.Element => {
         >
           {/* Close Button */}
           <button
-            className="absolute top-4 right-4 text-white text-2xl z-50"
+            className="absolute top-4 right-4 text-white text-[3rem] z-50"
             onClick={closeModal}
           >
             &times;
