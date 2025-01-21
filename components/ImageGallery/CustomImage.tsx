@@ -27,7 +27,7 @@ const CustomImage = (props: ThumbnailImageProps): JSX.Element => {
         src={props.item.src}
         quality={20}
         fill
-        sizes="300px"
+        sizes="500px"
       />
     </div>
   );

@@ -6,8 +6,8 @@ export default function SaveTheDate() {
     <div>
       {/* <HeroSlideshow /> */}
       <HeroImage
-        portraitPhotoIndex={13}
-        landscapePhotoIndex={4}
+        portraitPhotoIndex={47}
+        landscapePhotoIndex={55}
         justify="start"
         opacity={0.5}
         breakpoint={768}

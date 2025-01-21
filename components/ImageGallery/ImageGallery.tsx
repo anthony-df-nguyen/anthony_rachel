@@ -56,15 +56,15 @@ const MyImageGallery = (): JSX.Element => {
 
   const handleNext = useCallback(() => {
     setCurrentImage((prev) =>
-      prev !== null && prev === images.length - 1 ? 0 : (prev ?? 0) + 1
+      prev !== null && prev === galleryImages.length - 1 ? 0 : (prev ?? 0) + 1
     );
-  }, [images.length]);
+  }, [galleryImages.length]);
 
   const handlePrev = useCallback(() => {
     setCurrentImage((prev) =>
-      prev !== null && prev === 0 ? images.length - 1 : (prev ?? 0) - 1
+      prev !== null && prev === 0 ? galleryImages.length - 1 : (prev ?? 0) - 1
     );
-  }, [images.length]);
+  }, [galleryImages.length]);
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: handleNext,
@@ -143,7 +143,7 @@ const MyImageGallery = (): JSX.Element => {
                 className="w-full h-full flex items-center justify-center p-4 relative"
               >
                 <Image
-                  src={images[currentImage].src}
+                  src={galleryImages[currentImage].src}
                   alt={`Image ${currentImage}`}
                   fill
                   className="max-w-full max-h-full object-contain"

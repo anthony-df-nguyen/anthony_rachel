@@ -12,8 +12,8 @@ export default function Home() {
       <Header transparent />
       <div className="absolute top-0 left-0 w-full h-screen">
         <HeroImage
-          portraitPhotoIndex={13}
-          landscapePhotoIndex={4}
+          portraitPhotoIndex={47}
+          landscapePhotoIndex={54}
           justify="start"
           opacity={0.5}
           breakpoint={768}

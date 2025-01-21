@@ -5,7 +5,7 @@ const OurStory = () => {
   return (
     <div>
       <ImageContent
-        image={6}
+        image={42}
         orientation="left"
         imageHeightClass="py-[16rem]  md:py-96 lg:py-[30rem]"
       >
