@@ -1,11 +1,8 @@
-// @ts-nocheck
-import {Header, Footer, NavStrip} from "@/components/Navigation";
-//import HeroImage from "@/components/Hero/Hero";
+import {Header, Footer} from "@/components/Navigation";
 import HeroVideo from "@/components/Hero/HeroVideo";
 import Schedule from "@/components/Schedule/Schedule";
 import Section from "@/components/Section";
 import OurStory from "@/components/OurStory";
-import CountdownTimer from "@/components/Countdown";
 
 export default function Home() {
   return (
@@ -37,10 +34,10 @@ export default function Home() {
         <Section title="The Schedule" id="schedule">
           <Schedule />
         </Section>
-        {/* <hr />
+        <hr />
         <Section title="Our Story" id="our_story">
           <OurStory />
-        </Section> */}
+        </Section>
       </div>
       <Footer />
     </div>

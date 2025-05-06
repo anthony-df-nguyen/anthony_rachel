@@ -4,8 +4,8 @@ import NextImage from "next/image";
 import debounce from "lodash.debounce";
 import { useSwipeable } from "react-swipeable";
 import { Gallery } from "@/components/ReactGridGallery";
-import { CustomImage, images } from "@/components/ImageGallery";
-
+import { images } from "./constants";
+import CustomImage from "./CustomImage";
 const galleryImages = images.filter((row) => !row.hidden);
 
 const MyImageGallery = (): JSX.Element => {

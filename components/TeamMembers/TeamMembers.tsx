@@ -28,7 +28,7 @@ export default function TeamMembers({ team, cols }: Props): JSX.Element {
       >
         {team.map((person,i) => (
           <li key={person.name + i}>
-            <div className="relative aspect-[1/1] w-full rounded-2xl overflow-hidden">
+            <div className="relative aspect-[1/1] w-full">
               <Image
                 alt={`${person.name}'s profile picture`}
                 src={person.imageUrl}
