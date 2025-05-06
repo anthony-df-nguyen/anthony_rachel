@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback, JSX} from "react";
 import NextImage from "next/image";
 import debounce from "lodash.debounce";
 import { useSwipeable } from "react-swipeable";
