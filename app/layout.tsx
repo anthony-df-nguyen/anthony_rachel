@@ -27,14 +27,14 @@ const Titles = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Save the Date | Rachel & Anthony",
+  title: "Rachel & Anthony",
   description: "Rachel & Anthony Nguyen's wedding website",
   openGraph: {
-    title: "Save the Date | Rachel & Anthony Nguyen",
+    title: "Rachel & Anthony Nguyen",
     description: "Our wedding website",
     type: "website",
     url: "https://www.rachelanthonynguyen.com/",
-    images: "/images/DSC_5389.jpg",
+    images: "/images/gallery/beach17.jpg",
   },
 };
 
