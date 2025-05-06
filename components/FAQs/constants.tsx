@@ -7,14 +7,6 @@ type FAQs = {
 
 const faqs: FAQs[] = [
   {
-    question: "What is the dress code?",
-    answer: "The dress code is [formal/semi-formal/cocktail/etc.].",
-  },
-  {
-    question: "Are kids invited?",
-    answer: "Due to limited space, at this time we can only extend invites to kids to our closest family and friends.",
-  },
-  {
     question: "How do I RSVP?",
     answer: (
       <>
@@ -31,12 +23,44 @@ const faqs: FAQs[] = [
   {
     question: "Can I bring a plus-one?",
     answer:
-      "If your invite includes a plus-one, we’d love for them to join us! However, we kindly ask that guests refrain from bringing additional attendees unexpectedly. Thank you for your understanding!",
+      "Due to limited capacity, we are only able to accommodate those formally invited. If you received a plus one, it will be addressed on your envelope. If you have further questions, please reach out to us.",
   },
   {
-    question: "Where is your gift registry?",
+    question: "Are kids invited?",
     answer:
-      "We don't have a gift registry, but we will have an envelope box at the reception for cards and gifts. Your presence at our wedding is the greatest gift of all!",
+      "Due to limited space, at this time we can only extend invites to kids to our closest family and friends.",
+  },
+
+  {
+    question: "Do you have a gift registry?",
+    answer: (
+      <div>
+        <div>
+          f you would like to give a gift, we are grateful for any contributions
+          toward our future together. Thank you so much! To contribute to our
+          newlywed fund, you are more than welcome to send monetary gifts
+          through Venmo, Zelle or cash/check at the wedding reception.
+        </div>
+        <br />
+        <div className="text-center">
+          <b>Venmo</b>: @anthony10101
+        </div>
+        <div className="text-center">
+          <b>Zelle</b>: 714-791-1606
+        </div>
+        <div className="text-center">
+          <b>Checks Payable to</b>: Anthony Nguyen
+        </div>
+      </div>
+    ),
+  },
+  {
+    question: "Will there be an open bar?",
+    answer: "There will be an open bar. Please plan accordingly."
+  },
+  {
+    question: "What is the dress code?",
+    answer: "The dress code is [formal/semi-formal/cocktail/etc.].",
   },
   {
     question: "Can I take photos during the ceremony?",
@@ -47,11 +71,6 @@ const faqs: FAQs[] = [
     question: "Is there a wedding hashtag?",
     answer:
       "Yes, our wedding hashtag is [#hashtag]. Share your photos using the tag!",
-  },
-  {
-    question: "Will there be dancing?",
-    answer:
-      "Absolutely! Come ready to celebrate and show off your dance moves.",
   },
   {
     question: "What happens if it rains?",

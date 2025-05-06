@@ -35,11 +35,6 @@ const images = [
     height: 4899,
   },
   {
-    src: "/images/DSC_5235.jpg",
-    width: 4898,
-    height: 3265,
-  },
-  {
     src: "/images/DSC_1490.jpg",
     width: 4903,
     height: 3262,
@@ -50,19 +45,9 @@ const images = [
     height: 3266,
   },
   {
-    src: "/images/DSC_5378.jpg",
-    width: 4899,
-    height: 3266,
-  },
-  {
     src: "/images/NEF_0953.jpg",
     width: 4903,
     height: 3262,
-  },
-  {
-    src: "/images/DSC_5446.jpg",
-    width: 3265,
-    height: 4898,
   },
   {
     src: "/images/DSC_5427.jpg",
@@ -83,11 +68,6 @@ const images = [
     src: "/images/hawaii-oahu-2024-67.jpg",
     width: 3262,
     height: 4903,
-  },
-  {
-    src: "/images/NEF_3218.jpg",
-    width: 4903,
-    height: 3262,
   },
   {
     src: "/images/NEF_3490.jpg",
@@ -115,11 +95,6 @@ const images = [
     height: 3262,
   },
   {
-    src: "/images/NEF_5958.jpg",
-    width: 4903,
-    height: 3262,
-  },
-  {
     src: "/images/NEF_3741.jpg",
     width: 4589,
     height: 3053,
@@ -128,11 +103,6 @@ const images = [
     src: "/images/NEF_6897.jpg",
     width: 4903,
     height: 3262,
-  },
-  {
-    src: "/images/sd_night_0724-0178.jpg",
-    width: 3263,
-    height: 4903,
   },
   {
     src: "/images/NEF_9960.jpg",
@@ -157,11 +127,6 @@ const images = [
   {
     src: "/images/AnthonyRachel Fairview 2025-7.jpg",
     width: 3266,
-    height: 4898,
-  },
-  {
-    src: "/images/AnthonyRachel Fairview 2025-13.jpg",
-    width: 3265,
     height: 4898,
   },
   {
