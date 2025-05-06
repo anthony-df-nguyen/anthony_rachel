@@ -4,8 +4,7 @@ import Section from "@/components/Section";
 export default function SaveTheDate() {
   return (
     <div>
-      {/* <HeroSlideshow /> */}
-      <HeroImage
+      {/* <HeroImage
         portraitPhotoIndex={47}
         landscapePhotoIndex={55}
         justify="start"
@@ -49,7 +48,7 @@ export default function SaveTheDate() {
             </div>
           </div>
         </Section>
-      </div>
+      </div> */}
     </div>
   );
 }
