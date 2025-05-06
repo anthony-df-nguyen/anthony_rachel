@@ -1,4 +1,9 @@
-const images = [
+type SourceImage = {
+  src: string,
+  width: number,
+  height: number,
+}
+const images: SourceImage[] = [
   {
     src: "/images/gallery/anthony_rachel_engagement-16.jpg",
     width: 4895,
@@ -15,20 +20,102 @@ const images = [
     height: 3268,
   },
   {
-    src: "/images/gallery/DSC_5064.jpg",
-    width: 3265,
-    height: 4898,
+    src: "/images/gallery/anthony_rachel_engagement-81.jpg",
+    width: 4899,
+    height: 3266,
   },
+  {
+    src: "/images/gallery/beach1.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach2.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach3.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach4.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach5.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach6.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach7.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach8.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach9.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach10.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach11.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach12.jpg",
+    width: 3159,
+    height: 4739,
+  },
+  {
+    src: "/images/gallery/beach13.jpg",
+    width: 3648,
+    height: 5472,
+  },
+  {
+    src: "/images/gallery/beach14.jpg",
+    width: 2075,
+    height: 3130,
+  },
+  {
+    src: "/images/gallery/beach15.jpg",
+    width: 3130,
+    height: 2075,
+  },
+  {
+    src: "/images/gallery/beach16.jpg",
+    width: 5472,
+    height: 3648,
+  },
+  {
+    src: "/images/gallery/beach17.jpg",
+    width: 5114,
+    height: 3409,
+  },
+
   {
     src: "/images/gallery/DSC_5356.jpg",
     width: 4899,
     height: 3266,
   },
-  {
-    src: "/images/gallery/anthony_rachel_engagement-81.jpg",
-    width: 4899,
-    height: 3266,
-  },
+
   {
     src: "/images/gallery/DSC_5361.jpg",
     width: 3266,
@@ -129,127 +216,45 @@ const images = [
     width: 3266,
     height: 4898,
   },
+ 
+  {
+    src: "/images/gallery/DSC_5064.jpg",
+    width: 3265,
+    height: 4898,
+  },
+];
+
+const theBoys: SourceImage[] = [
   {
     src: "/images/gallery/kiet.jpg",
     width: 500,
     height: 500,
-    hidden: true,
   },
   {
     src: "/images/gallery/aaron.jpg",
     width: 500,
     height: 500,
-    hidden: true,
   },
   {
     src: "/images/gallery/john.jpg",
     width: 500,
     height: 500,
-    hidden: true,
   },
   {
     src: "/images/gallery/josh.jpg",
     width: 500,
     height: 500,
-    hidden: true,
   },
   {
     src: "/images/gallery/andrei.jpg",
     width: 500,
     height: 500,
-    hidden: true,
   },
   {
     src: "/images/gallery/mark.jpg",
     width: 500,
     height: 500,
-    hidden: true,
   },
-  {
-    src: "/images/gallery/beach1.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach2.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach3.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach4.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach5.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach6.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach7.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach8.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach9.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach10.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach11.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach12.jpg",
-    width: 3159,
-    height: 4739,
-  },
-  {
-    src: "/images/gallery/beach13.jpg",
-    width: 3648,
-    height: 5472,
-  },
-  {
-    src: "/images/gallery/beach14.jpg",
-    width: 2075,
-    height: 3130,
-  },
-  {
-    src: "/images/gallery/beach15.jpg",
-    width: 3130,
-    height: 2075,
-  },
-  {
-    src: "/images/gallery/beach16.jpg",
-    width: 5472,
-    height: 3648,
-  },
-  {
-    src: "/images/gallery/beach17.jpg",
-    width: 5114,
-    height: 3409,
-  },
-];
+]
 
 export { images };
