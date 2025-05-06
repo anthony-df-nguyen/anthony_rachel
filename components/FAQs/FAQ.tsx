@@ -9,7 +9,7 @@ import faqs from "./constants";
 export default function FAQs() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
           <dl className="mt-0 space-y-6 divide-y divide-gray-900/10">
             {faqs.map((faq) => (
@@ -31,7 +31,7 @@ export default function FAQs() {
                     </span>
                   </DisclosureButton>
                 </dt>
-                <DisclosurePanel as="dd" className="mt-2 pr-12">
+                <DisclosurePanel as="dd" className="mt-2">
                   <div className="text-base text-gray-600">{faq.answer}</div>
                 </DisclosurePanel>
               </Disclosure>
