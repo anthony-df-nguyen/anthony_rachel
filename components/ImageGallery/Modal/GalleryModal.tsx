@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
 import NextImage from "next/image";
+import { SourceImage } from "../constants";
 import debounce from "lodash.debounce";
 import { useSwipeable } from "react-swipeable";
 
 type Props = {
   currentIndex: number;
-  images: { src: string }[];
+  images: SourceImage[];
   closeModal: () => void;
 };
 
@@ -115,6 +116,8 @@ const GalleryModal = ({ currentIndex, images, closeModal }: Props) => {
           <NextImage
             key={images[currentImage].src}
             src={images[currentImage].src}
+             placeholder="blur"
+            blurDataURL={images[currentImage].blurDataURL}
             alt={`Image ${currentImage}`}
             fill
             className={`max-w-full max-h-full object-contain transition-opacity duration-300 ${

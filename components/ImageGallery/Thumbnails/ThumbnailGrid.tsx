@@ -1,10 +1,11 @@
 import React from "react";
 import Masonry from "react-masonry-css";
 import NextImage from "next/image";
+import { SourceImage } from "../constants";
 import styles from "./ThumbnailGrid.module.scss"; // for scoped styles
 
 type Props = {
-  images: { src: string; height: number; width: number }[];
+  images: SourceImage[];
   onClick: (index: number) => void;
 };
 
@@ -31,6 +32,8 @@ const ThumbnailGrid = ({ images, onClick }: Props) => {
             height={item.height}
             loading="lazy"
             quality={20}
+            placeholder="blur"
+            blurDataURL={item.blurDataURL}
             sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, (max-width: 1440px) 30vw, 25vw"
             onClick={() => onClick(index)}
             style={{ cursor: "pointer" }}
