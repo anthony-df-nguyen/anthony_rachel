@@ -22,8 +22,7 @@ const OurStory = () => {
         <br />
         <p>
           {" "}
-          Anthony was born and raised in Westminster, CA. He enjoyed scootering
-          around with friends and playing the guitar.
+          Anthony was born and raised in Westminster, CA. He enjoyed playing videos games, basketball, and scootering around town with his friends.
         </p>
         <br />
         <p>
@@ -46,8 +45,8 @@ const OurStory = () => {
         <p>
           {" "}
           We both went to UC Irvine for college, but studied on opposite sides
-          of the campus. We each made lifelong friends, discovered our passions,
-          and started figuring out the kind of life we wanted to build.{" "}
+          of the campus. Although we were there at the same time, we never ran into each other. We each made lifelong friends, discovered our passions,
+          and started figuring out the kind of life we wanted to build.
         </p>
       </ImageContent>
       <br />
@@ -62,9 +61,8 @@ const OurStory = () => {
         </div>
         <br />
         <p>
-          {" "}
           We met in playing basketball at Settler’s Park in Irvine, CA. We
-          realized that we shared [ ].{" "}
+          realized that we shared common interests, including knowing mutual friends and driving stick. But most importantly, Rachel was very impressed by how good Anthony was at basketball and how fresh his haircut was.
         </p>
         <br />
         <p>

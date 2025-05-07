@@ -10,7 +10,7 @@ const faqs: FAQs[] = [
     question: "How do I RSVP?",
     answer: (
       <>
-        Please RSVP by August 1st 2025 using
+        Please RSVP by August 1st 2025 using &nbsp;
         <a
           className="underline"
           href="https://www.zola.com/wedding/anthonyandrachelseptember20/rsvp"
@@ -24,7 +24,7 @@ const faqs: FAQs[] = [
     question: "I can't find my name when trying to RSVP, what should I do?",
     answer: (
       <>
-        Please reach out to us as soon as possible at &nbsp;
+        Make sure to enter your name that you sent us on your Save the Date form. Try different variations as well. If you still have trouble please reach out to us as soon as possible by calling or emailing at &nbsp;
         <a href="mailto:anthonyrachelnguyen@gmail.com" className="underline">
           anthonyrachelnguyen@gmail.com
         </a>{" "}
