@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Footer from "@/components/Navigation/Footer";
 import {
   Pinyon_Script,
   Montserrat,
@@ -28,12 +27,13 @@ const Titles = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Rachel & Anthony",
   description: "Rachel & Anthony Nguyen's wedding website",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   openGraph: {
     title: "Rachel & Anthony Nguyen",
-    description: "Our wedding website",
+    description: "Our Wedding | 09.20.2025",
     type: "website",
     url: "https://www.rachelanthonynguyen.com/",
-    images: "/images/gallery/beach17.jpg",
+    images: "/images/gallery/21-beach.jpg",
   },
 };
 

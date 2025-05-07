@@ -50,7 +50,6 @@ export const couple: TeamMember[] = [
     role: "The Groom",
     imageUrl: "/images/wedding_party/anthony.jpg",
   },
- 
 ];
 
 export const groomsmen: TeamMember[] = [
@@ -64,22 +63,21 @@ export const groomsmen: TeamMember[] = [
     role: "Best Man",
     imageUrl: "/images/wedding_party/vinh.jpg",
   },
-  {
-    name: "Ben",
-    role: "Groomsman",
-    imageUrl: "/images/wedding_party/ben.jpg",
-  },
-
-  {
-    name: "Kenny",
-    role: "Groomsman",
-    imageUrl: "/images/wedding_party/kenny.jpg",
-  },
 
   {
     name: "Andy",
     role: "Groomsman",
     imageUrl: "/images/wedding_party/andy2.jpg",
+  },
+  {
+    name: "Ben",
+    role: "Groomsman",
+    imageUrl: "/images/wedding_party/ben.jpg",
+  },
+  {
+    name: "Kenny",
+    role: "Groomsman",
+    imageUrl: "/images/wedding_party/kenny.jpg",
   },
 
   {
@@ -101,14 +99,15 @@ export const bridesmaids: TeamMember[] = [
     imageUrl: "/images/wedding_party/josephine.jpg",
   },
   {
-    name: "Sally",
-    role: "Bridesmaid",
-    imageUrl: "/images/wedding_party/sally.jpeg",
-  },
-  {
     name: "Christine",
     role: "Bridesmaid",
     imageUrl: "/images/wedding_party/christine_p.jpg",
+  },
+
+  {
+    name: "Kathleen",
+    role: "Bridesmaid",
+    imageUrl: "/images/wedding_party/kathleen.jpg",
   },
   {
     name: "Lili",
@@ -116,8 +115,8 @@ export const bridesmaids: TeamMember[] = [
     imageUrl: "/images/wedding_party/lili.jpg",
   },
   {
-    name: "Kathleen",
+    name: "Sally",
     role: "Bridesmaid",
-    imageUrl: "/images/wedding_party/kathleen.jpg",
+    imageUrl: "/images/wedding_party/sally.jpeg",
   },
 ];
