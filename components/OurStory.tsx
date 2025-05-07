@@ -1,18 +1,20 @@
 import React from "react";
-import ImageContent from "@/components/ImageContent";
+import Content2Images from "./Content2Images";
+import { images as BabyPhotos } from "data/images/baby_photos";
+import { images as Gallery } from "data/images/gallery";
 
-const OurStory = () => {
+type Props = {};
+
+const OurStory2 = (props: Props) => {
   return (
-    <div className="max-w-4xl mx-auto">
-      <ImageContent
-        image={14}
-        orientation="right"
-        imageHeightClass="py-[8rem]  md:py-8 lg:py-[16rem]"
+    <div>
+      <Content2Images
+        title="Childhood"
+        image_1={BabyPhotos["anthony_kid"]}
+        image_2={BabyPhotos["rachel_baby"]}
+        orientation="left"
       >
-        <div className="titles text-3xl text-left pb-6 border-b-[1px]">
-          Childhood
-        </div>
-        <br />
+        {" "}
         <p>
           {" "}
           We both grew up in Southern California, just a few cities apart. While
@@ -22,7 +24,8 @@ const OurStory = () => {
         <br />
         <p>
           {" "}
-          Anthony was born and raised in Westminster, CA. He enjoyed playing videos games, basketball, and scootering around town with his friends.
+          Anthony was born and raised in Westminster, CA. He enjoyed playing
+          videos games, basketball, and scootering around town with his friends.
         </p>
         <br />
         <p>
@@ -30,39 +33,33 @@ const OurStory = () => {
           Rachel was born and raised in Orange, CA. She was always involved in
           school and started playing basketball in high school.
         </p>
-      </ImageContent>
-      <br />
-      <br />
-      <ImageContent
-        image={4}
-        orientation="left"
-        imageHeightClass="py-[8rem]  md:py-8 lg:py-[12rem]"
+      </Content2Images>
+      <Content2Images
+        title="College"
+        image_1={BabyPhotos["anthony_graduation"]}
+        image_2={BabyPhotos["rachel_college"]}
+        orientation="right"
       >
-        <div className="titles text-3xl text-left pb-6 border-b-[1px]">
-          College
-        </div>
-        <br />
         <p>
           {" "}
           We both went to UC Irvine for college, but studied on opposite sides
-          of the campus. Although we were there at the same time, we never ran into each other. We each made lifelong friends, discovered our passions,
-          and started figuring out the kind of life we wanted to build.
+          of the campus. Although we were there at the same time, we never ran
+          into each other. We each made lifelong friends, discovered our
+          passions, and started figuring out the kind of life we wanted to
+          build.
         </p>
-      </ImageContent>
-      <br />
-      <br />
-      <ImageContent
-        image={2}
-        orientation="right"
-        imageHeightClass="py-[8rem]  md:py-8 lg:py-[16rem]"
+      </Content2Images>
+      <Content2Images
+        title="How We Met"
+        image_1={Gallery["38"]}
+        orientation="left"
       >
-        <div className="titles text-3xl text-left pb-6 border-b-[1px]">
-          How We Met
-        </div>
-        <br />
         <p>
           We met in playing basketball at Settler’s Park in Irvine, CA. We
-          realized that we shared common interests, including knowing mutual friends and driving stick. But most importantly, Rachel was very impressed by how good Anthony was at basketball and how fresh his haircut was.
+          realized that we shared common interests, including knowing mutual
+          friends and driving stick. But most importantly, Rachel was very
+          impressed by how good Anthony was at basketball and how fresh his
+          haircut was.
         </p>
         <br />
         <p>
@@ -70,9 +67,9 @@ const OurStory = () => {
           together over the past 5 years. We’re so excited to start this next
           chapter—and can’t wait to celebrate with you.
         </p>
-      </ImageContent>
+      </Content2Images>
     </div>
   );
 };
 
-export default OurStory;
+export default OurStory2;

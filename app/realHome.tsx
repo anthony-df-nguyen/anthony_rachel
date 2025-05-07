@@ -1,4 +1,4 @@
-import {Header, Footer} from "@/components/Navigation";
+import { Header, Footer } from "@/components/Navigation";
 import HeroVideo from "@/components/Hero/HeroVideo";
 import Schedule from "@/components/Schedule/Schedule";
 import Section from "@/components/Section";
@@ -9,9 +9,7 @@ export default function Home() {
     <div className="">
       <Header transparent />
       <div className="absolute top-0 left-0 w-full h-screen">
-        <HeroVideo
-          opacity={.5}
-        >
+        <HeroVideo opacity={0.5}>
           <div className="titles text-center text-white font-extralight text-[1.75rem] xl:text-[2.5rem] 2xl:text-[3rem]  drop-shadow-lg">
             <div className="">09.20.2025</div>
           </div>

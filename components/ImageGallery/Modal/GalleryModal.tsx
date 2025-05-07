@@ -1,37 +1,44 @@
 import React, { useCallback, useEffect, useState } from "react";
 import NextImage from "next/image";
-import { SourceImage } from "../constants";
+import { SourceImage } from "data/images/types";
 import debounce from "lodash.debounce";
 import { useSwipeable } from "react-swipeable";
 
 type Props = {
-  currentIndex: number;
-  images: SourceImage[];
+  currentKey: string;
+  images: Record<string, SourceImage>;
   closeModal: () => void;
 };
 
-const GalleryModal = ({ currentIndex, images, closeModal }: Props) => {
-  const [currentImage, setCurrentImage] = useState(currentIndex);
+const GalleryModal = ({ currentKey, images, closeModal }: Props) => {
+  const imageKeys = Object.keys(images);
+  const [activeKey, setActiveKey] = useState(currentKey);
   const [isImageLoading, setIsImageLoading] = useState(true);
+
+  const getKeyIndex = (key: string) => imageKeys.indexOf(key);
+  const getNextKey = (key: string) => {
+    const index = getKeyIndex(key);
+    return imageKeys[(index + 1) % imageKeys.length];
+  };
+  const getPrevKey = (key: string) => {
+    const index = getKeyIndex(key);
+    return imageKeys[(index - 1 + imageKeys.length) % imageKeys.length];
+  };
 
   const handleNext = useCallback(
     debounce(() => {
       setIsImageLoading(true);
-      setCurrentImage((prev) =>
-        prev === images.length - 1 ? 0 : prev + 1
-      );
-    }, 300),
-    [images.length]
+      setActiveKey((prev) => getNextKey(prev));
+    }, 100),
+    [imageKeys]
   );
 
   const handlePrev = useCallback(
     debounce(() => {
       setIsImageLoading(true);
-      setCurrentImage((prev) =>
-        prev === 0 ? images.length - 1 : prev - 1
-      );
-    }, 300),
-    [images.length]
+      setActiveKey((prev) => getPrevKey(prev));
+    }, 100),
+    [imageKeys]
   );
 
   const swipeHandlers = useSwipeable({
@@ -65,18 +72,22 @@ const GalleryModal = ({ currentIndex, images, closeModal }: Props) => {
   }, [handleNext, handlePrev]);
 
   useEffect(() => {
-    const preload = (index: number) => {
-      const src = images[index].src;
-      const width = Math.round(window.innerWidth * 0.7); // match your `sizes` logic
+    const preload = (key: string) => {
+      const src = images[key]?.src;
+      if (!src) return;
+
+      const width = Math.round(window.innerWidth * 0.7);
       const optimizedSrc = `/_next/image?url=${encodeURIComponent(src)}&w=${width}&q=75`;
-    
       const img = new Image();
       img.src = optimizedSrc;
     };
 
-    preload((currentImage + 1) % images.length);
-    preload((currentImage - 1 + images.length) % images.length);
-  }, [currentImage]);
+    preload(getNextKey(activeKey));
+    preload(getPrevKey(activeKey));
+  }, [activeKey]);
+
+  const currentImage = images[activeKey];
+  if (!currentImage) return null;
 
   return (
     <div
@@ -114,11 +125,11 @@ const GalleryModal = ({ currentIndex, images, closeModal }: Props) => {
           )}
 
           <NextImage
-            key={images[currentImage].src}
-            src={images[currentImage].src}
-             placeholder="blur"
-            blurDataURL={images[currentImage].blurDataURL}
-            alt={`Image ${currentImage}`}
+            key={currentImage.src}
+            src={currentImage.src}
+            placeholder="blur"
+            blurDataURL={currentImage.blurDataURL}
+            alt={`Image ${activeKey}`}
             fill
             className={`max-w-full max-h-full object-contain transition-opacity duration-300 ${
               isImageLoading ? "opacity-0" : "opacity-100"

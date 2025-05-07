@@ -7,7 +7,7 @@ const args = process.argv.slice(2);
 const [inputFolder, outputFile] = args;
 
 if (!inputFolder || !outputFile) {
-  console.error("❌ Usage: node generate-images-array.cjs <publicFolder> <outputFile>");
+  console.error("❌ Usage: node generate-images-object.cjs <publicFolder> <outputFile>");
   process.exit(1);
 }
 
@@ -25,7 +25,7 @@ async function generate() {
     /\.(jpe?g|png)$/i.test(file)
   );
 
-  const images = [];
+  const imageMap = {};
 
   for (const file of files) {
     const filePath = path.join(INPUT_DIR, file);
@@ -38,28 +38,24 @@ async function generate() {
     }
 
     const base64 = await getBase64(buffer);
+    const baseName = path.parse(file).name;
 
-    images.push({
+    imageMap[baseName] = {
       src: `/${inputFolder}/${file}`.replace(/\\/g, "/"),
       width: metadata.width,
       height: metadata.height,
       blurDataURL: base64,
-    });
+    };
   }
 
   const output = `// Auto-generated from /public/${inputFolder}. Do not edit manually.
-export type SourceImage = {
-  src: string;
-  width: number;
-  height: number;
-  blurDataURL: string;
-};
+import type { SourceImage } from "data/images/types";
 
-export const images: SourceImage[] = ${JSON.stringify(images, null, 2)};
+export const images: Record<string, SourceImage> = ${JSON.stringify(imageMap, null, 2)};
 `;
 
   fs.writeFileSync(OUTPUT_PATH, output);
-  console.log(`✅ Wrote ${images.length} images to ${outputFile}`);
+  console.log(`✅ Wrote ${Object.keys(imageMap).length} images to ${outputFile}`);
 }
 
 generate();

@@ -2,7 +2,7 @@
 
 import React, { JSX } from "react";
 import Image from "next/image";
-import { TeamMember } from "./constants";
+import { TeamMember } from "data/images/teamMembers";
 
 type Props = {
   team: TeamMember[];

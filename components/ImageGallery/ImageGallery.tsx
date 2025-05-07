@@ -1,40 +1,40 @@
 "use client";
-import React, { useState, useRef, useCallback, useEffect } from "react";
-import { images } from "./constants";
+import React, { useState, useRef, useEffect } from "react";
+import { images } from "data/images/gallery";
 import ThumbnailGrid from "./Thumbnails/ThumbnailGrid";
 import GalleryModal from "./Modal/GalleryModal";
 
 const MyImageGallery = () => {
-  const [currentImage, setCurrentImage] = useState<number | null>(null);
+  const [currentImageKey, setCurrentImageKey] = useState<string | null>(null);
   const isModalOpenRef = useRef(false);
 
-  const handleClick = (index: number) => {
-    setCurrentImage(index);
+  const handleClick = (key: string) => {
+    setCurrentImageKey(key);
     isModalOpenRef.current = true;
     document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
-    setCurrentImage(null);
+    setCurrentImageKey(null);
     isModalOpenRef.current = false;
     document.body.style.overflow = "";
   };
 
   useEffect(() => {
-    if (currentImage !== null) {
+    if (currentImageKey !== null) {
       document.body.style.overflow = "hidden";
       return () => {
         document.body.style.overflow = "";
       };
     }
-  }, [currentImage]);
+  }, [currentImageKey]);
 
   return (
     <div>
       <ThumbnailGrid images={images} onClick={handleClick} />
-      {currentImage !== null && (
+      {currentImageKey !== null && (
         <GalleryModal
-          currentIndex={currentImage}
+          currentKey={currentImageKey}
           images={images}
           closeModal={closeModal}
         />

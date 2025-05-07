@@ -1,10 +1,6 @@
 import TeamMembers from "@/components/TeamMembers/TeamMembers";
 import Section from "@/components/Section";
-import {
-  groomsmen,
-  bridesmaids,
-  couple,
-} from "@/components/TeamMembers/constants";
+import { groomsmen, bridesmaids, couple } from "data/images/teamMembers";
 
 export default function TheBoys() {
   return (

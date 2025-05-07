@@ -1,12 +1,12 @@
 import React from "react";
 import Masonry from "react-masonry-css";
 import NextImage from "next/image";
-import { SourceImage } from "../constants";
+import { SourceImage } from "data/images/types";
 import styles from "./ThumbnailGrid.module.scss"; // for scoped styles
 
 type Props = {
-  images: SourceImage[];
-  onClick: (index: number) => void;
+  images: Record<string, SourceImage>;
+  onClick: (key: string) => void;
 };
 
 const breakpointColumnsObj = {
@@ -23,8 +23,8 @@ const ThumbnailGrid = ({ images, onClick }: Props) => {
       className={styles.masonryGrid}
       columnClassName={styles.masonryColumn}
     >
-      {images.map((item, index) => (
-        <div key={item.src} style={{ marginBottom: "16px" }}>
+      {Object.entries(images).map(([key, item]) => (
+        <div key={key} style={{ marginBottom: "16px" }}>
           <NextImage
             src={item.src}
             alt=""
@@ -35,7 +35,7 @@ const ThumbnailGrid = ({ images, onClick }: Props) => {
             placeholder="blur"
             blurDataURL={item.blurDataURL}
             sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, (max-width: 1440px) 30vw, 25vw"
-            onClick={() => onClick(index)}
+            onClick={() => onClick(key)}
             style={{ cursor: "pointer" }}
           />
         </div>

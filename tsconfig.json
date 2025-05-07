@@ -42,7 +42,7 @@
     "pages/**/*",
     "src/**/*",
     ".next/types/**/*.ts"
-  ],
+, "data/images/teamMembers.ts"  ],
   "exclude": [
     "node_modules"
   ]
