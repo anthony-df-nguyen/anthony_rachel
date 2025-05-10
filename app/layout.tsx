@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import Footer from "@/components/Navigation/Footer";
 import {
   Pinyon_Script,
-  Trirong,
   Montserrat,
   Cormorant_Garamond,
 } from "next/font/google";
@@ -27,14 +25,15 @@ const Titles = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Save the Date | Rachel & Anthony",
+  title: "Rachel & Anthony",
   description: "Rachel & Anthony Nguyen's wedding website",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   openGraph: {
-    title: "Save the Date | Rachel & Anthony Nguyen",
-    description: "Our wedding website",
+    title: "Rachel & Anthony Nguyen",
+    description: "Our Wedding | 09.20.2025",
     type: "website",
     url: "https://www.rachelanthonynguyen.com/",
-    images: "/images/DSC_5389.jpg",
+    images: "/images/gallery/21-beach.jpg",
   },
 };
 
@@ -49,9 +48,8 @@ export default function RootLayout({
       <body
         className={`${Fancy.variable} ${Body.variable} ${Titles.variable} antialiased `}
       >
-        <div className="pt-100 relative">{children}</div> 
+        <div className="pt-100 relative">{children}</div>
       </body>
-
     </html>
   );
 }

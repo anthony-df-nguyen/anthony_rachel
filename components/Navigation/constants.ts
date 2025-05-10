@@ -5,8 +5,9 @@ const navLinks: {
 }[] = [
   { name: "Home", href: "/" },
   { name: "Schedule", href: "/#schedule" },
-  { name: "Our Story", href: "/#our_story" },
+  { name: "Our Story", href: "/our_story" },
   { name: "Gallery", href: "/gallery" },
+  { name: "Wedding Party", href: "/wedding_party"},
   { name: "FAQ", href: "/faq" },
   {
     name: "RSVP",

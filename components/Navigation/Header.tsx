@@ -56,7 +56,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
     <header className={headerClass}>
       <nav
         aria-label="Global"
-        className="mx-auto container flex lg:flex-col lg:gap-4 items-center justify-between p-4 lg:px-0"
+        className="mx-auto flex lg:flex-col lg:gap-4 items-center justify-between p-4 lg:px-0"
       >
         {/* Hamburger Button for Mobile Menu */}
         <div className="flex lg:hidden">
@@ -114,7 +114,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
                     key={item.name}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     {item.name}
                   </Link>

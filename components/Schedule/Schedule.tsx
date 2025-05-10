@@ -21,13 +21,18 @@ const Schedule = ({ showIcon, showDescription }: Props) => {
 
           <div className="mt-0 titles mx-auto text-center text-lg lg:text-xl">
             {event.link ? (
-              <a href={event.link} className="text-center flex items-center gap-1 hover:text-[var(--green)]">
+              <a href={event.link} className="text-center flex items-center gap-1 hover:text-[var(--green)] underline">
                 {event.location} 
               </a>
             ) : (
               event.location
             )}
+            
           </div>
+          <div className="text-center titles">
+            {event.city}
+          </div>
+         
           {showDescription && event.description && (
             <p className="mx-auto mt-4 max-w-prose">{event.description}</p>
           )}

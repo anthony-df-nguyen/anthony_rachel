@@ -1,20 +1,10 @@
-import { NextConfig } from 'next';
+import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        port: "",
-        pathname: "**",
-      },
-    ],
-  },
+const config: NextConfig = {
   eslint: {
-    dirs: ['pages', 'app', 'lib', 'src', 'components'], // Include all other directories
-    ignoreDuringBuilds: true, // Optional: Set to true to ignore ESLint during builds
+    dirs: ['pages', 'app', 'lib', 'src', 'components'],
+    ignoreDuringBuilds: true,
   },
 };
 
-export default nextConfig;
+export default config;

@@ -47,3 +47,8 @@ body {
     @apply bg-[var(--darkgreen)] border-0;
   }
 }
+
+// Override Picflow Widget
+.picflow-assets {
+  max-width: unset !important;
+}

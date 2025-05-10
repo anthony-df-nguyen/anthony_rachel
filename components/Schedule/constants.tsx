@@ -7,6 +7,7 @@ type Event = {
   description?: string;
   icon?: React.ReactNode;
   link?: string;
+  city: string;
 };
 const events: Event[] = [
   {
@@ -20,6 +21,7 @@ const events: Event[] = [
         In return, the elders offer advice, gifts, and well-wishes for the couple’s future.
       `,
     icon: <FaGift className="mx-auto h-8 w-8 text-gray-400" />,
+    city: "Orange"
   },
   {
     time: "12 pm",
@@ -33,11 +35,12 @@ const events: Event[] = [
       `,
     icon: <FaChurch className="mx-auto h-10 w-10 text-gray-400" />,
     link: "https://g.co/kgs/1CXz3Nn",
+     city: "Orange"
   },
   {
     time: "6 pm",
     title: "The Reception",
-    location: "RSVP for Details",
+    location: "The Villa",
     description: `
         Our reception will be a joyful celebration of our marriage, shared with our closest family and friends. 
         Set in a warm and festive atmosphere, the evening will include delicious food, heartfelt toasts, and plenty of dancing. 
@@ -45,7 +48,8 @@ const events: Event[] = [
         We can’t wait to celebrate this special moment with those who mean the most to us!
       `,
     icon: <MdCelebration className="mx-auto h-10 w-10 text-gray-400" />,
-    link: "https://www.zola.com/wedding/anthonyandrachelseptember20/rsvp",
+    link: "https://maps.app.goo.gl/1z9Qty8WTii9jTiM6",
+     city: "Westminster"
   },
   // {
   //   time: "12 am",
