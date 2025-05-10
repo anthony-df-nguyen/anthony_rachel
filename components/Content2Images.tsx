@@ -26,7 +26,7 @@ export default function Content2Images({
   return (
     <div className="my-12 lg:my-32 overflow-hidden bg-white">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <section className={`grid grid-cols-1 ${gridCols} gap-8 lg:gap-16`}>
+        <section className={`grid grid-cols-1 ${gridCols} gap-8 ${isSingleImage && "lg:gap-20"}`}>
           {/* Text Block */}
           <div
             className={`
@@ -54,7 +54,7 @@ export default function Content2Images({
             {/* First Image */}
             <div
               className={`relative aspect-square overflow-hidden rounded-xl  shadow-xl outline-1 -outline-offset-1 outline-black/10 ${
-                !isSingleImage && orientation === "left" ? "lg:mt-12" : ""
+                !isSingleImage && orientation === "left" ? "lg:mt-20 lg:left-12 " : "z-10"
               }`}
             >
               <Image
@@ -62,8 +62,12 @@ export default function Content2Images({
                 alt="Image 1"
                 width={image_1.width}
                 height={image_1.height}
-                quality={50}
-                sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                quality={isSingleImage ? 75 : 50}
+                sizes={
+                  isSingleImage
+                    ? "(max-width: 768px) 90vw, (max-width: 1280px) 80vw, 40vw"
+                    : "(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                }
                 className="absolute top-0 left-0 w-full h-full object-cover"
               />
             </div>
@@ -72,7 +76,7 @@ export default function Content2Images({
             {image_2 && (
               <div
                 className={`relative aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 ${
-                  orientation === "right" ? "lg:mt-12" : ""
+                  orientation === "right" ? "lg:mt-20 lg:right-12 z-20" : ""
                 }`}
               >
                 <Image

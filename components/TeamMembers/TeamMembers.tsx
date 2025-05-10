@@ -21,13 +21,13 @@ export default function TeamMembers({ team, cols }: Props): JSX.Element {
     }[cols] || "lg:grid-cols-1"; // Fallback to 1 if invalid
 
   return (
-    <div className="mx-auto max-w-4xl px-6 lg:px-8">
+    <div className="mx-auto">
       <ul
         role="list"
-        className={`mx-auto mt-0 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 lg:gap-y-16 lg:mx-0 lg:max-w-none ${lgColsClass}`}
+        className={`mx-auto mt-0 grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-y-8 lg:max-w-4xl ${lgColsClass}`}
       >
         {team.map((person,i) => (
-          <li key={person.name + i}>
+          <li key={person.name + i} className="bg-white">
             <div className="relative aspect-[1/1] w-full">
               <Image
                 alt={`${person.name}'s profile picture`}
@@ -37,7 +37,7 @@ export default function TeamMembers({ team, cols }: Props): JSX.Element {
                 sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 50vw"
               />
             </div>
-            <div className="text-center">
+            <div className="text-center pb-8">
               {" "}
               <h3 className="titles mt-6 text-2xl font-semibold tracking-tight text-gray-900">
                 {person.name}

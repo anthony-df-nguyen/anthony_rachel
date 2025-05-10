@@ -56,7 +56,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
     <header className={headerClass}>
       <nav
         aria-label="Global"
-        className="mx-auto container flex lg:flex-col lg:gap-4 items-center justify-between p-4 lg:px-0"
+        className="mx-auto flex lg:flex-col lg:gap-4 items-center justify-between p-4 lg:px-0"
       >
         {/* Hamburger Button for Mobile Menu */}
         <div className="flex lg:hidden">

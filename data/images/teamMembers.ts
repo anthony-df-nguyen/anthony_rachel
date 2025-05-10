@@ -48,7 +48,7 @@ export const couple: TeamMember[] = [
   {
     name: "Anthony",
     role: "The Groom",
-    imageUrl: "/images/wedding_party/anthony.jpg",
+    imageUrl: "/images/wedding_party/anthony_2.jpg",
   },
 ];
 
@@ -83,7 +83,7 @@ export const groomsmen: TeamMember[] = [
   {
     name: "Spencer",
     role: "Groomsman",
-    imageUrl: "/images/wedding_party/spencer.jpg",
+    imageUrl: "/images/wedding_party/spencer_2.jpg",
   },
 ];
 

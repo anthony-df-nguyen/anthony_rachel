@@ -29,7 +29,7 @@ const GalleryModal = ({ currentKey, images, closeModal }: Props) => {
     debounce(() => {
       setIsImageLoading(true);
       setActiveKey((prev) => getNextKey(prev));
-    }, 100),
+    }, 0),
     [imageKeys]
   );
 
@@ -37,7 +37,7 @@ const GalleryModal = ({ currentKey, images, closeModal }: Props) => {
     debounce(() => {
       setIsImageLoading(true);
       setActiveKey((prev) => getPrevKey(prev));
-    }, 100),
+    }, 0),
     [imageKeys]
   );
 

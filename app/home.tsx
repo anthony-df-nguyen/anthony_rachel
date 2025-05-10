@@ -2,7 +2,6 @@ import { Header, Footer } from "@/components/Navigation";
 import HeroVideo from "@/components/Hero/HeroVideo";
 import Schedule from "@/components/Schedule/Schedule";
 import Section from "@/components/Section";
-import OurStory from "@/components/OurStory";
 
 export default function Home() {
   return (
@@ -31,10 +30,6 @@ export default function Home() {
       <div className="container mx-auto mt-[-4rem] lg:mt-[-6rem]">
         <Section title="The Schedule" id="schedule">
           <Schedule />
-        </Section>
-        <hr />
-        <Section title="Our Story" id="our_story">
-          <OurStory />
         </Section>
       </div>
       <Footer />

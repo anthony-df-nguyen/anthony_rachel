@@ -17,22 +17,23 @@ const OurStory2 = (props: Props) => {
         <div className="">
           <p>
             We both grew up in Southern California, just a few cities apart.
-            While we didn’t know each other back then, we were unknowingly
+            While we didn’t know each other, we were unknowingly
             living parallel lives.
           </p>
           <br />
           <p>
-            Anthony was born and raised in Westminster, CA. He spent most of his
-            childhood playing video games, basketball, watching wrestling, or
+            Anthony grew up in Westminster, CA. He spent most of his
+            childhood playing video games, basketball, guitar, watching wrestling, and
             messing about the town with his scooter gang.
           </p>
           <br />
           <p>
-            Rachel was born and raised in Orange, CA. She was always involved in
-            school and started playing basketball in high school.
+            Rachel grew up in Orange, CA. She was always involved in
+            school and enjoyed hanging out with her friends.
           </p>
         </div>
       </Content2Images>
+    
       <Content2Images
         title="College"
         image_1={BabyPhotos["anthony_graduation"]}
@@ -41,10 +42,7 @@ const OurStory2 = (props: Props) => {
       >
         <p>
           We both went to UC Irvine for college, but studied on opposite sides
-          of the campus. While Rachel was studying hard in Biology, Anthony took
-          the easy way out and studied Economics. Although they were both there
-          at the same time, they never ran into each other until years after
-          graduating.
+          of campus. Rachel studied Biology and Anthony took Economics. Even though we shared lecture halls, libraries, and dining spots, we didn't actually meet until years after we graduated.
         </p>
         <br />
         <p>
@@ -52,17 +50,14 @@ const OurStory2 = (props: Props) => {
           figuring out the kind of life we wanted to build.
         </p>
       </Content2Images>
+
       <Content2Images
         title="How We Met"
         image_1={Gallery["38-misc"]}
         orientation="left"
       >
         <p>
-          Rachel and Anthony finally met in late 2019 while playing basketball at Settler’s Park in Irvine, CA through chance. We
-          realized that we shared common interests, including knowing mutual
-          friends and driving stick. But most importantly, Rachel was very
-          impressed by how good Anthony was at basketball and how fresh his
-          haircut was.
+          We finally met by chance in late 2019 while playing basketball at Settler's Park. It didn’t take long to realize we had a lot in common—mutual friends, shared interests, and an appreciation for basketball.
         </p>
         <br />
         <p>

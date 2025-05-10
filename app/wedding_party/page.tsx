@@ -4,7 +4,7 @@ import { groomsmen, bridesmaids, couple } from "data/images/teamMembers";
 
 export default function TheBoys() {
   return (
-    <div>
+    <div className="container mx-auto">
       <Section title="The Wedding Party" id="wedding_party">
         <TeamMembers team={couple} cols={2} />
       </Section>

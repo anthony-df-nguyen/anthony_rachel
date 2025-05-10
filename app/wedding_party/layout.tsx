@@ -12,7 +12,7 @@ export default function TheBoys({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <div className="">
       <Header transparent={false} />
       {children}
       <Footer />

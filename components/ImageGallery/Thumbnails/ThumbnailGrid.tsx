@@ -3,6 +3,7 @@ import Masonry from "react-masonry-css";
 import NextImage from "next/image";
 import { SourceImage } from "data/images/types";
 import styles from "./ThumbnailGrid.module.scss"; // for scoped styles
+import { ClassNames } from "@emotion/react";
 
 type Props = {
   images: Record<string, SourceImage>;
@@ -24,7 +25,7 @@ const ThumbnailGrid = ({ images, onClick }: Props) => {
       columnClassName={styles.masonryColumn}
     >
       {Object.entries(images).map(([key, item]) => (
-        <div key={key} style={{ marginBottom: "16px" }}>
+        <div key={key} style={{ marginBottom: "16px" }} className="">
           <NextImage
             src={item.src}
             alt=""
