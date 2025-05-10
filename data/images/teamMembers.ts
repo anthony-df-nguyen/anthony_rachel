@@ -72,7 +72,7 @@ export const groomsmen: TeamMember[] = [
   {
     name: "Ben",
     role: "Groomsman",
-    imageUrl: "/images/wedding_party/ben.jpg",
+    imageUrl: "/images/wedding_party/ben_2.jpg",
   },
   {
     name: "Kenny",
