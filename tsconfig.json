@@ -41,7 +41,8 @@
     "next-env.d.ts",
     "pages/**/*",
     "src/**/*",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "app/**/*"
 , "data/images/teamMembers.ts"  ],
   "exclude": [
     "node_modules"

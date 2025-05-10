@@ -1,9 +1,9 @@
 import React from "react";
-import Section from "../components/Section";
-import Image from "next/Image";
-import Link from "next/Link";
-import Header from "../components/Navigation/Header";
-import Footer from "../components/Navigation/Footer";
+import Section from "@/components/Section";
+import Image from "next/image";
+import Link from "next/link";
+import Header from "@/components/Navigation/Header";
+import Footer from "@/components/Navigation/Footer";
 
 export default function NotFound() {
   return (
