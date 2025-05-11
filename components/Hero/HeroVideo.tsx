@@ -10,7 +10,7 @@ const HeroVideo = ({ children = <></>, opacity = 0.5 }: Props): JSX.Element => {
   const [videoError, setVideoError] = useState(false);
 
   return (
-    <div className="bg-black relative w-screen h-screen overflow-hidden flex justify-center items-center">
+    <div className="bg-black relative w-screen h-screen overflow-hidden flex justify-center items-center z-10">
       {/* Background Video Layer */}
       <div
         className="absolute top-0 left-0 w-full h-full pointer-events-none"

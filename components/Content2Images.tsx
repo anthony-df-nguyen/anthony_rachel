@@ -68,7 +68,7 @@ export default function Content2Images({
                     ? "(max-width: 768px) 90vw, (max-width: 1280px) 80vw, 40vw"
                     : "(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
                 }
-                className="absolute top-0 left-0 w-full h-full object-cover"
+                className="absolute top-0 left-0 w-full h-full object-cover z-0"
               />
             </div>
 
@@ -76,7 +76,7 @@ export default function Content2Images({
             {image_2 && (
               <div
                 className={`relative aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 ${
-                  orientation === "right" ? "lg:mt-20 lg:right-12 z-20" : ""
+                  orientation === "right" ? "lg:mt-20 lg:right-12 z-10" : ""
                 }`}
               >
                 <Image

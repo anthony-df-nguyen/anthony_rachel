@@ -24,7 +24,7 @@ export default function TeamMembers({ team, cols }: Props): JSX.Element {
     <div className="mx-auto">
       <ul
         role="list"
-        className={`mx-auto mt-0 grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-y-8 lg:max-w-4xl ${lgColsClass}`}
+        className={`mx-auto mt-0 grid grid-cols-2 gap-x-4 gap-y-2 lg:gap-y-8 lg:max-w-4xl ${lgColsClass}`}
       >
         {team.map((person,i) => (
           <li key={person.name + i} className="bg-white">

@@ -46,7 +46,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerClass = `z-10 w-full sticky top-0 transition-colors duration-700 ${
+  const headerClass = `z-20 w-full sticky top-0 transition-colors duration-700 ${
     isScrolled || !transparent
       ? "shadow bg-white/90 text-black backdrop-blur-md backdrop-opacity-80"
       : "bg-transparent text-white"
@@ -59,7 +59,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
         className="mx-auto flex lg:flex-col lg:gap-4 items-center justify-between p-4 lg:px-0"
       >
         {/* Hamburger Button for Mobile Menu */}
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden z-20">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
@@ -74,7 +74,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
 
         {/* Logo */}
         <Link href="/" className="flex lg:flex-1">
-          <div className="fancy text-2xl lg:text-4xl">Rachel & Anthony</div>
+          <div className="fancy text-2xl lg:text-4xl  mr-6 lg:mr-0">Rachel & Anthony</div>
         </Link>
 
         {/* Empty Placeholder for Alignment */}
@@ -93,7 +93,7 @@ export default function Example({ transparent = false }: Props): JSX.Element {
         className="lg:hidden transition duration-200 ease-in data-[closed]:opacity-0"
         transition
       >
-        <div className="fixed inset-0 z-10" aria-hidden="true" />
+        <div className="fixed inset-0 z-30" aria-hidden="true" />
         <DialogPanel className="fixed inset-y-0 left-0 z-30 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             {/* Close Button */}
