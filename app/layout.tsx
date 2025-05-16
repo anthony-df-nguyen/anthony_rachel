@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleTagManager } from "@next/third-parties/google";
 import {
   Pinyon_Script,
   Montserrat,
@@ -27,7 +28,9 @@ const Titles = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Rachel & Anthony",
   description: "Rachel & Anthony Nguyen's wedding website",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  ),
   openGraph: {
     title: "Rachel & Anthony Nguyen",
     description: "Our Wedding | 09.20.2025",
@@ -45,6 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="robots" content="noindex,nofollow" />
+      <GoogleTagManager gtmId="GTM-PR7TPJJT" />
       <body
         className={`${Fancy.variable} ${Body.variable} ${Titles.variable} antialiased `}
       >
