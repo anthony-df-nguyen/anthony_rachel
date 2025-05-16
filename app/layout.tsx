@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="robots" content="noindex,nofollow" />
-      <GoogleTagManager gtmId="GTM-PR7TPJJT" />
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
       <body
         className={`${Fancy.variable} ${Body.variable} ${Titles.variable} antialiased `}
       >
