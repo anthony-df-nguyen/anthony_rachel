@@ -42,7 +42,7 @@ const events: Event[] = [
         As space is limited, this event is RSVP only, ensuring we can create a meaningful and unforgettable experience for everyone in attendance. 
         We can’t wait to celebrate this special moment with those who mean the most to us!
       `,
-    link: "https://maps.app.goo.gl/1z9Qty8WTii9jTiM6",
+    link: "https://g.co/kgs/zNsMzdu",
      city: "Westminster"
   },
 ];

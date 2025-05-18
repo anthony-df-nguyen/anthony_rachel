@@ -22,6 +22,7 @@ const Schedule = ({ showDescription }: Props) => {
             {event.link ? (
               <a
                 href={event.link}
+                target="_blank"
                 className="text-center flex items-center gap-1 text-[var(--green)] font-bold hover:text-[var(--darkgreen)] underline hover:text-[var(--green)]"
               >
                 {event.location}
