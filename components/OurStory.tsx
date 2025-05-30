@@ -53,7 +53,7 @@ const OurStory2 = (props: Props) => {
 
       <Content2Images
         title="How We Met"
-        image_1={Gallery["38-misc"]}
+        image_1={Gallery["46-misc"]}
         orientation="left"
       >
         <p>
